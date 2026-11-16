@@ -1,0 +1,24 @@
+package com.google.android.gms.internal.fido;
+
+import defpackage.ix3;
+import java.io.Closeable;
+
+/* JADX INFO: loaded from: classes5.dex */
+public final class zzfm implements Closeable {
+    private static final ThreadLocal zza = new zzfl();
+    private int zzb = 0;
+
+    public static int zza() {
+        return ((zzfm) zza.get()).zzb;
+    }
+
+    @Override // java.io.Closeable, java.lang.AutoCloseable
+    public final void close() {
+        int i = this.zzb;
+        if (i > 0) {
+            this.zzb = i - 1;
+        } else {
+            ix3.h("Mismatched calls to RecursionDepth (possible error in core library)");
+        }
+    }
+}

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/widget_root" android:background="@drawable/timetable_widget_background" android:paddingTop="20.0dp" android:paddingBottom="20.0dp" android:layout_width="match_parent" android:layout_height="match_parent" android:paddingStart="18.0dp" android:paddingEnd="18.0dp"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/timetable_widget_large_title" />
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:paddingBottom="40.0dp" android:layout_width="match_parent" android:layout_height="0.0dp" android:layout_weight="1.0">
+        <ImageView android:id="@id/large_empty_art" android:layout_width="114.78299dp" android:layout_height="80.0dp" android:contentDescription="@null" />
+        <TextView android:textColor="@color/timetable_widget_text_primary" android:ellipsize="end" android:gravity="center" android:id="@id/large_empty_title" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12.0dp" android:maxLines="2" style="@style/TimetableWidgetText.HeadlineL" />
+        <TextView android:textColor="@color/timetable_widget_text_secondary" android:ellipsize="end" android:gravity="center" android:id="@id/large_empty_subtitle" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="2.0dp" android:maxLines="2" style="@style/TimetableWidgetText.HeadlineXXS" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/widget_root" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/small_background" android:layout_width="match_parent" android:layout_height="match_parent" android:src="@drawable/timetable_widget_fill" android:scaleType="fitXY" android:contentDescription="@null" />
+    <FrameLayout android:layout_gravity="center|bottom" android:layout_width="@dimen/timetable_widget_small_canvas" android:layout_height="@dimen/timetable_widget_small_canvas">
+        <ImageView android:id="@id/small_artwork" android:layout_width="match_parent" android:layout_height="match_parent" android:contentDescription="@null" />
+        <LinearLayout android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:orientation="vertical" android:id="@id/small_bubble" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="83.67999dp">
+            <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <ImageView android:id="@id/small_bubble_fill" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/timetable_widget_pill_fill" android:scaleType="fitXY" android:layout_alignTop="@id/small_countdown" android:layout_alignBottom="@id/small_countdown" android:contentDescription="@null" android:layout_alignStart="@id/small_countdown" android:layout_alignEnd="@id/small_countdown" />
+                <Chronometer android:gravity="center" android:id="@id/small_countdown" android:layout_width="wrap_content" android:layout_height="24.0dp" android:paddingStart="8.0dp" android:paddingEnd="8.0dp" style="@style/TimetableWidgetText.CaptionMBold" />
+            </RelativeLayout>
+            <ImageView android:id="@id/small_bubble_pointer" android:layout_width="9.0dp" android:layout_height="4.753998dp" android:layout_marginTop="-1.9599915dp" android:src="@drawable/timetable_widget_bubble_pointer" android:contentDescription="@null" />
+        </LinearLayout>
+    </FrameLayout>
+    <LinearLayout android:gravity="center_horizontal" android:layout_gravity="center|top" android:orientation="vertical" android:id="@id/small_text" android:paddingTop="16.0dp" android:layout_width="@dimen/timetable_widget_small_canvas" android:layout_height="wrap_content">
+        <TextView android:ellipsize="end" android:gravity="center" android:id="@id/small_title" android:layout_width="@dimen/timetable_widget_small_text_width" android:layout_height="wrap_content" android:maxLines="2" style="@style/TimetableWidgetText.HeadlineS" />
+        <TextView android:ellipsize="end" android:gravity="center" android:id="@id/small_detail" android:layout_width="@dimen/timetable_widget_small_text_width" android:layout_height="16.0dp" android:maxLines="1" style="@style/TimetableWidgetText.CaptionMBold" />
+        <TextView android:ellipsize="end" android:gravity="center" android:id="@id/small_note" android:layout_width="@dimen/timetable_widget_small_text_width" android:layout_height="16.0dp" android:maxLines="1" style="@style/TimetableWidgetText.CaptionM" />
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,28 @@
+package com.google.android.gms.internal.ads;
+
+import defpackage.u34;
+import java.util.concurrent.ThreadFactory;
+import java.util.concurrent.atomic.AtomicInteger;
+
+/* JADX INFO: loaded from: classes4.dex */
+final class zzcgs implements ThreadFactory {
+    final /* synthetic */ String zza;
+    private final AtomicInteger zzb = new AtomicInteger(1);
+
+    public zzcgs(String str) {
+        this.zza = str;
+    }
+
+    @Override // java.util.concurrent.ThreadFactory
+    public final Thread newThread(Runnable runnable) {
+        int andIncrement = this.zzb.getAndIncrement();
+        int length = String.valueOf(andIncrement).length();
+        String str = this.zza;
+        StringBuilder sb = new StringBuilder(u34.a(12, length, str));
+        sb.append("AdWorker(");
+        sb.append(str);
+        sb.append(") #");
+        sb.append(andIncrement);
+        return new Thread(runnable, sb.toString());
+    }
+}

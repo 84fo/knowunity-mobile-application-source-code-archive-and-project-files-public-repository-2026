@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_gravity="start|bottom"
+    android:orientation="vertical"
+    android:id="@+id/medium_message"
+    android:layout_width="136dp"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    android:layout_marginStart="16dp">
+    <ImageView
+        android:id="@+id/medium_message_art"
+        android:layout_width="66dp"
+        android:layout_height="46dp"
+        android:contentDescription="@null"/>
+    <TextView
+        android:textColor="@color/timetable_widget_text_primary"
+        android:gravity="start|center_vertical"
+        android:id="@+id/medium_message_title"
+        android:layout_width="match_parent"
+        android:layout_height="24dp"
+        android:layout_marginTop="4dp"
+        android:maxLines="1"
+        android:autoSizeTextType="uniform"
+        android:autoSizeStepGranularity="1sp"
+        android:autoSizeMinTextSize="16sp"
+        android:autoSizeMaxTextSize="21sp"
+        style="@style/TimetableWidgetText.HeadlineS"/>
+</LinearLayout>

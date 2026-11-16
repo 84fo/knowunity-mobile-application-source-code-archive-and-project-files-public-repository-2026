@@ -1,0 +1,119 @@
+.class final Lcom/google/android/gms/ads/internal/client/hsdp/zzb;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lcom/google/android/play/core/hsdp/service/HsdpDeepLinkService$HsdpDeepLinkServiceListener;
+
+
+# instance fields
+.field final synthetic zza:Lcom/google/android/gms/ads/internal/client/hsdp/IHsdpServiceCallback;
+
+
+# direct methods
+.method public constructor <init>(Lcom/google/android/gms/ads/internal/client/hsdp/HsdpDeepLinkServiceWrapper;Lcom/google/android/gms/ads/internal/client/hsdp/IHsdpServiceCallback;)V
+    .locals 0
+
+    iput-object p2, p0, Lcom/google/android/gms/ads/internal/client/hsdp/zzb;->zza:Lcom/google/android/gms/ads/internal/client/hsdp/IHsdpServiceCallback;
+
+    invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final onAffordanceEnded()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final onAffordanceStarted()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final onDeepLinkStarted()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final onDismissed(Landroid/os/Bundle;)V
+    .locals 0
+
+    iget-object p0, p0, Lcom/google/android/gms/ads/internal/client/hsdp/zzb;->zza:Lcom/google/android/gms/ads/internal/client/hsdp/IHsdpServiceCallback;
+
+    if-eqz p0, :cond_0
+
+    :try_start_0
+    invoke-interface {p0, p1}, Lcom/google/android/gms/ads/internal/client/hsdp/IHsdpServiceCallback;->onDismissed(Landroid/os/Bundle;)V
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-void
+
+    :catch_0
+    move-exception p0
+
+    const-string p1, "RemoteException in onDismissed"
+
+    invoke-static {p1, p0}, Lcom/google/android/gms/ads/internal/util/client/zzo;->zzg(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final onError(Landroid/os/Bundle;)V
+    .locals 0
+
+    iget-object p0, p0, Lcom/google/android/gms/ads/internal/client/hsdp/zzb;->zza:Lcom/google/android/gms/ads/internal/client/hsdp/IHsdpServiceCallback;
+
+    if-eqz p0, :cond_0
+
+    :try_start_0
+    invoke-interface {p0, p1}, Lcom/google/android/gms/ads/internal/client/hsdp/IHsdpServiceCallback;->onError(Landroid/os/Bundle;)V
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-void
+
+    :catch_0
+    move-exception p0
+
+    const-string p1, "RemoteException in onError"
+
+    invoke-static {p1, p0}, Lcom/google/android/gms/ads/internal/util/client/zzo;->zzg(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final onShown(Landroid/os/Bundle;)V
+    .locals 0
+
+    iget-object p0, p0, Lcom/google/android/gms/ads/internal/client/hsdp/zzb;->zza:Lcom/google/android/gms/ads/internal/client/hsdp/IHsdpServiceCallback;
+
+    if-eqz p0, :cond_0
+
+    :try_start_0
+    invoke-interface {p0, p1}, Lcom/google/android/gms/ads/internal/client/hsdp/IHsdpServiceCallback;->onShown(Landroid/os/Bundle;)V
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-void
+
+    :catch_0
+    move-exception p0
+
+    const-string p1, "RemoteException in onShown"
+
+    invoke-static {p1, p0}, Lcom/google/android/gms/ads/internal/util/client/zzo;->zzg(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_0
+    return-void
+.end method

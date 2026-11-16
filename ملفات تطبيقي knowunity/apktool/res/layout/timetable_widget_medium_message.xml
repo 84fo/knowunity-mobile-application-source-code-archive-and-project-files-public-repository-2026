@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_gravity="start|bottom" android:orientation="vertical" android:id="@id/medium_message" android:layout_width="136.0dp" android:layout_height="wrap_content" android:layout_marginBottom="10.0dp" android:layout_marginStart="16.0dp"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/medium_message_art" android:layout_width="66.0dp" android:layout_height="46.0dp" android:contentDescription="@null" />
+    <TextView android:textColor="@color/timetable_widget_text_primary" android:gravity="start|center" android:id="@id/medium_message_title" android:layout_width="match_parent" android:layout_height="24.0dp" android:layout_marginTop="4.0dp" android:maxLines="1" android:autoSizeTextType="uniform" android:autoSizeStepGranularity="1.0sp" android:autoSizeMinTextSize="16.0sp" android:autoSizeMaxTextSize="21.0sp" style="@style/TimetableWidgetText.HeadlineS" />
+</LinearLayout>

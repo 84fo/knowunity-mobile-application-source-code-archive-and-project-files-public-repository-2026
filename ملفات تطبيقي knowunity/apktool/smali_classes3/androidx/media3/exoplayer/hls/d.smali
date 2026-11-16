@@ -1,0 +1,48 @@
+.class public final synthetic Landroidx/media3/exoplayer/hls/d;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Landroidx/media3/common/util/Consumer;
+
+
+# instance fields
+.field public final synthetic a:Landroidx/media3/exoplayer/hls/HlsInterstitialsAdsLoader$LoaderCallback;
+
+.field public final synthetic b:Landroidx/media3/exoplayer/hls/HlsInterstitialsAdsLoader$AssetList;
+
+.field public final synthetic c:Landroid/util/Pair;
+
+
+# direct methods
+.method public synthetic constructor <init>(Landroidx/media3/exoplayer/hls/HlsInterstitialsAdsLoader$LoaderCallback;Landroidx/media3/exoplayer/hls/HlsInterstitialsAdsLoader$AssetList;Landroid/util/Pair;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Landroidx/media3/exoplayer/hls/d;->a:Landroidx/media3/exoplayer/hls/HlsInterstitialsAdsLoader$LoaderCallback;
+
+    iput-object p2, p0, Landroidx/media3/exoplayer/hls/d;->b:Landroidx/media3/exoplayer/hls/HlsInterstitialsAdsLoader$AssetList;
+
+    iput-object p3, p0, Landroidx/media3/exoplayer/hls/d;->c:Landroid/util/Pair;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final accept(Ljava/lang/Object;)V
+    .locals 2
+
+    iget-object v0, p0, Landroidx/media3/exoplayer/hls/d;->c:Landroid/util/Pair;
+
+    check-cast p1, Landroidx/media3/exoplayer/hls/HlsInterstitialsAdsLoader$Listener;
+
+    iget-object v1, p0, Landroidx/media3/exoplayer/hls/d;->a:Landroidx/media3/exoplayer/hls/HlsInterstitialsAdsLoader$LoaderCallback;
+
+    iget-object p0, p0, Landroidx/media3/exoplayer/hls/d;->b:Landroidx/media3/exoplayer/hls/HlsInterstitialsAdsLoader$AssetList;
+
+    invoke-static {v1, p0, v0, p1}, Landroidx/media3/exoplayer/hls/HlsInterstitialsAdsLoader$LoaderCallback;->c(Landroidx/media3/exoplayer/hls/HlsInterstitialsAdsLoader$LoaderCallback;Landroidx/media3/exoplayer/hls/HlsInterstitialsAdsLoader$AssetList;Landroid/util/Pair;Landroidx/media3/exoplayer/hls/HlsInterstitialsAdsLoader$Listener;)V
+
+    return-void
+.end method

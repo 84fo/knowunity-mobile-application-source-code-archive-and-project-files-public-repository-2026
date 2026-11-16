@@ -1,0 +1,151 @@
+{
+  "KnowieRunOutline": {
+    "name": "KnowieRunOutline",
+    "framework_varying_schema": 2,
+    "domain": "surface",
+    "shading_model": "unlit",
+    "blending": "opaque",
+    "culling": "front",
+    "uniform_block": "MaterialParams",
+    "attributes": [],
+    "vertex": {
+      "unskinned": "KnowieRunOutlineUnskinnedVertex",
+      "skinned": "KnowieRunOutlineSkinnedVertex",
+      "depth": "KnowieRunOutlineUnskinnedDepthVertex"
+    },
+    "parameters": [
+      {
+        "name": "outline_color",
+        "type": "vec4",
+        "default": [
+          0.0137,
+          0.016,
+          0.0823,
+          1.0
+        ],
+        "hint": {
+          "kind": "source_color"
+        }
+      },
+      {
+        "name": "outline_width",
+        "type": "float",
+        "default": 0.014
+      },
+      {
+        "name": "min_px",
+        "type": "float",
+        "default": 0.0
+      },
+      {
+        "name": "pixel_scale",
+        "type": "vec3",
+        "default": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "name": "fade_start",
+        "type": "float",
+        "default": 60.0
+      },
+      {
+        "name": "fade_end",
+        "type": "float",
+        "default": 110.0
+      }
+    ],
+    "samplers": []
+  },
+  "KnowieRunTimerStrip": {
+    "name": "KnowieRunTimerStrip",
+    "framework_varying_schema": 2,
+    "domain": "surface",
+    "shading_model": "unlit",
+    "blending": "alpha",
+    "culling": "none",
+    "uniform_block": "MaterialParams",
+    "attributes": [],
+    "parameters": [
+      {
+        "name": "color",
+        "type": "vec4",
+        "default": [
+          0.28,
+          0.19,
+          0.79,
+          1.0
+        ],
+        "hint": {
+          "kind": "source_color"
+        }
+      },
+      {
+        "name": "progress",
+        "type": "float",
+        "default": 1.0
+      }
+    ],
+    "samplers": []
+  },
+  "KnowieRunToon": {
+    "name": "KnowieRunToon",
+    "framework_varying_schema": 2,
+    "domain": "surface",
+    "shading_model": "unlit",
+    "blending": "opaque",
+    "culling": "back",
+    "uniform_block": "MaterialParams",
+    "attributes": [],
+    "parameters": [
+      {
+        "name": "base_color",
+        "type": "vec3",
+        "default": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "name": "light_direction",
+        "type": "vec3",
+        "default": [
+          -0.35,
+          -1.0,
+          0.45
+        ]
+      },
+      {
+        "name": "shadow_tint",
+        "type": "vec3",
+        "default": [
+          0.8,
+          0.78,
+          0.92
+        ]
+      },
+      {
+        "name": "band",
+        "type": "float",
+        "default": 0.05
+      },
+      {
+        "name": "band_softness",
+        "type": "float",
+        "default": 0.08
+      }
+    ],
+    "samplers": [
+      {
+        "name": "base_texture",
+        "type": "sampler2D",
+        "hint": {
+          "kind": "default_white"
+        }
+      }
+    ]
+  }
+}

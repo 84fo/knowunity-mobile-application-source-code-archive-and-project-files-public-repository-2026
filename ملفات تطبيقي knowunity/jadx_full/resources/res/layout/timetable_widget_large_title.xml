@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:textColor="@color/timetable_widget_text_primary"
+    android:ellipsize="end"
+    android:gravity="start|center_vertical"
+    android:id="@+id/large_title"
+    android:layout_width="match_parent"
+    android:layout_height="24dp"
+    android:maxLines="1"
+    style="@style/TimetableWidgetText.HeadlineS"/>

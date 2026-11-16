@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/widget_root" android:background="@drawable/timetable_widget_background" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:paddingTop="20.0dp" android:paddingBottom="20.0dp" android:layout_width="match_parent" android:layout_height="match_parent" android:paddingStart="16.0dp" android:paddingEnd="16.0dp">
+        <TextView android:textColor="@color/timetable_widget_text_primary" android:ellipsize="end" android:id="@id/headline" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/timetable_widget_logged_out_title" android:maxLines="1" style="@style/TimetableWidgetText.HeadlineM" />
+        <TextView android:textColor="@color/timetable_widget_text_secondary" android:ellipsize="end" android:id="@id/subtitle" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4.0dp" android:text="@string/timetable_widget_logged_out_subtitle" android:maxLines="2" style="@style/TimetableWidgetText.HeadlineXXS" />
+    </LinearLayout>
+    <ImageView android:layout_gravity="end|bottom" android:id="@id/mascot" android:layout_width="96.0dp" android:layout_height="96.0dp" android:layout_marginBottom="-26.0dp" android:src="@null" android:contentDescription="@null" android:layout_marginEnd="-12.0dp" />
+</FrameLayout>

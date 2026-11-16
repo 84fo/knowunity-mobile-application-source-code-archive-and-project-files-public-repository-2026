@@ -1,0 +1,12 @@
+package com.google.android.gms.internal.ads;
+
+/* JADX INFO: loaded from: classes4.dex */
+public interface zzagr {
+    public static final zzagr zza = new zzagq();
+
+    zzaia zzt(int i, int i2);
+
+    void zzw();
+
+    void zzx(zzahr zzahrVar);
+}

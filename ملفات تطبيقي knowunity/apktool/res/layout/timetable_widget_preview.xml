@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@drawable/timetable_widget_background" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="28.0dp" android:layout_height="wrap_content" android:layout_marginTop="16.0dp" android:layout_marginStart="16.0dp">
+        <TextView android:textColor="@color/timetable_widget_text_secondary" android:gravity="center" android:layout_width="match_parent" android:layout_height="16.0dp" android:text="@string/timetable_widget_preview_weekday" android:maxLines="1" style="@style/TimetableWidgetText.CaptionM" />
+        <TextView android:textColor="@color/timetable_widget_text_primary" android:gravity="center" android:layout_width="match_parent" android:layout_height="28.0dp" android:text="@string/timetable_widget_preview_day" android:maxLines="1" style="@style/TimetableWidgetText.HeadlineM" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dp" android:layout_marginStart="94.0dp" android:layout_marginEnd="12.0dp">
+        <FrameLayout android:layout_width="match_parent" android:layout_height="@dimen/timetable_widget_medium_card_height">
+            <ImageView android:layout_width="match_parent" android:layout_height="match_parent" android:src="@drawable/timetable_widget_pill_fill" android:scaleType="fitXY" android:tint="@color/timetable_widget_preview_first" android:contentDescription="@null" />
+            <LinearLayout android:gravity="start|center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:paddingStart="8.0dp" android:paddingEnd="8.0dp">
+                <TextView android:textColor="@color/timetable_widget_preview_on_first" android:layout_width="match_parent" android:layout_height="16.0dp" android:text="@string/timetable_widget_preview_first_subject" android:maxLines="1" style="@style/TimetableWidgetText.CaptionMBold" />
+                <TextView android:textColor="@color/timetable_widget_preview_on_first" android:layout_width="match_parent" android:layout_height="16.0dp" android:text="@string/timetable_widget_preview_first_time" android:maxLines="1" style="@style/TimetableWidgetText.CaptionM" />
+            </LinearLayout>
+        </FrameLayout>
+        <FrameLayout android:layout_width="match_parent" android:layout_height="@dimen/timetable_widget_medium_card_height" android:layout_marginTop="4.0dp">
+            <ImageView android:layout_width="match_parent" android:layout_height="match_parent" android:src="@drawable/timetable_widget_pill_fill" android:scaleType="fitXY" android:tint="@color/timetable_widget_preview_second" android:contentDescription="@null" />
+            <LinearLayout android:gravity="start|center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:paddingStart="8.0dp" android:paddingEnd="8.0dp">
+                <TextView android:textColor="@color/timetable_widget_preview_on_second" android:layout_width="match_parent" android:layout_height="16.0dp" android:text="@string/timetable_widget_preview_second_subject" android:maxLines="1" style="@style/TimetableWidgetText.CaptionMBold" />
+                <TextView android:textColor="@color/timetable_widget_preview_on_second" android:layout_width="match_parent" android:layout_height="16.0dp" android:text="@string/timetable_widget_preview_second_time" android:maxLines="1" style="@style/TimetableWidgetText.CaptionM" />
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+    <FrameLayout android:layout_gravity="start|bottom" android:layout_width="62.125977dp" android:layout_height="62.125977dp" android:translationX="-1.0629883dp" android:translationY="14.062988dp" android:rotation="12.0">
+        <ImageView android:layout_width="match_parent" android:layout_height="match_parent" android:src="@drawable/timetable_knowie_looking_up_body" android:tint="@color/timetable_widget_brand_bold" android:contentDescription="@null" />
+        <ImageView android:layout_width="match_parent" android:layout_height="match_parent" android:src="@drawable/timetable_knowie_excited_face" android:contentDescription="@null" />
+        <ImageView android:layout_width="match_parent" android:layout_height="match_parent" android:src="@drawable/timetable_knowie_excited_lids" android:tint="@color/timetable_widget_brand_bold" android:contentDescription="@null" />
+    </FrameLayout>
+</FrameLayout>

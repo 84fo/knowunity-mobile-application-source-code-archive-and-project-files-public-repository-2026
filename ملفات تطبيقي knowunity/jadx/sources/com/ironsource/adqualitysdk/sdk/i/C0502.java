@@ -1,0 +1,25 @@
+package com.ironsource.adqualitysdk.sdk.i;
+
+import com.tapjoy.TJPlacement;
+import java.util.ArrayList;
+
+/* JADX INFO: renamed from: com.ironsource.adqualitysdk.sdk.i.ᐝ, reason: contains not printable characters */
+/* JADX INFO: loaded from: classes5.dex */
+public final class C0502 implements InterfaceC0256 {
+
+    /* JADX INFO: renamed from: ﾒ, reason: contains not printable characters */
+    public final /* synthetic */ C0208 f2047;
+
+    public C0502(C0208 c0208) {
+        this.f2047 = c0208;
+    }
+
+    @Override // com.ironsource.adqualitysdk.sdk.i.InterfaceC0256
+    /* JADX INFO: renamed from: ﾒ */
+    public final Object mo1349(ArrayList arrayList, C0472 c0472) {
+        C0208 c0208 = this.f2047;
+        TJPlacement tJPlacement = (TJPlacement) arrayList.get(0);
+        c0208.getClass();
+        return tJPlacement.getListener();
+    }
+}

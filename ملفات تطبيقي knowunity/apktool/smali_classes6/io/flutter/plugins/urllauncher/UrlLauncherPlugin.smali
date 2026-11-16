@@ -1,0 +1,148 @@
+.class public final Lio/flutter/plugins/urllauncher/UrlLauncherPlugin;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lio/flutter/embedding/engine/plugins/FlutterPlugin;
+.implements Lio/flutter/embedding/engine/plugins/activity/ActivityAware;
+
+
+# static fields
+.field private static final TAG:Ljava/lang/String; = "UrlLauncherPlugin"
+
+
+# instance fields
+.field private urlLauncher:Lio/flutter/plugins/urllauncher/UrlLauncher;
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public onAttachedToActivity(Lio/flutter/embedding/engine/plugins/activity/ActivityPluginBinding;)V
+    .locals 0
+
+    iget-object p0, p0, Lio/flutter/plugins/urllauncher/UrlLauncherPlugin;->urlLauncher:Lio/flutter/plugins/urllauncher/UrlLauncher;
+
+    if-nez p0, :cond_0
+
+    const-string p0, "UrlLauncherPlugin"
+
+    const-string p1, "urlLauncher was never set."
+
+    invoke-static {p0, p1}, Landroid/util/Log;->wtf(Ljava/lang/String;Ljava/lang/String;)I
+
+    return-void
+
+    :cond_0
+    invoke-interface {p1}, Lio/flutter/embedding/engine/plugins/activity/ActivityPluginBinding;->getActivity()Landroid/app/Activity;
+
+    move-result-object p1
+
+    invoke-virtual {p0, p1}, Lio/flutter/plugins/urllauncher/UrlLauncher;->setActivity(Landroid/app/Activity;)V
+
+    return-void
+.end method
+
+.method public onAttachedToEngine(Lio/flutter/embedding/engine/plugins/FlutterPlugin$FlutterPluginBinding;)V
+    .locals 2
+
+    new-instance v0, Lio/flutter/plugins/urllauncher/UrlLauncher;
+
+    invoke-virtual {p1}, Lio/flutter/embedding/engine/plugins/FlutterPlugin$FlutterPluginBinding;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Lio/flutter/plugins/urllauncher/UrlLauncher;-><init>(Landroid/content/Context;)V
+
+    iput-object v0, p0, Lio/flutter/plugins/urllauncher/UrlLauncherPlugin;->urlLauncher:Lio/flutter/plugins/urllauncher/UrlLauncher;
+
+    sget-object v0, Lio/flutter/plugins/urllauncher/UrlLauncherApi;->Companion:Lio/flutter/plugins/urllauncher/UrlLauncherApi$Companion;
+
+    invoke-virtual {p1}, Lio/flutter/embedding/engine/plugins/FlutterPlugin$FlutterPluginBinding;->getBinaryMessenger()Lio/flutter/plugin/common/BinaryMessenger;
+
+    move-result-object p1
+
+    iget-object p0, p0, Lio/flutter/plugins/urllauncher/UrlLauncherPlugin;->urlLauncher:Lio/flutter/plugins/urllauncher/UrlLauncher;
+
+    invoke-virtual {v0, p1, p0}, Lio/flutter/plugins/urllauncher/UrlLauncherApi$Companion;->setUp(Lio/flutter/plugin/common/BinaryMessenger;Lio/flutter/plugins/urllauncher/UrlLauncherApi;)V
+
+    return-void
+.end method
+
+.method public onDetachedFromActivity()V
+    .locals 1
+
+    iget-object p0, p0, Lio/flutter/plugins/urllauncher/UrlLauncherPlugin;->urlLauncher:Lio/flutter/plugins/urllauncher/UrlLauncher;
+
+    if-nez p0, :cond_0
+
+    const-string p0, "UrlLauncherPlugin"
+
+    const-string v0, "urlLauncher was never set."
+
+    invoke-static {p0, v0}, Landroid/util/Log;->wtf(Ljava/lang/String;Ljava/lang/String;)I
+
+    return-void
+
+    :cond_0
+    const/4 v0, 0x0
+
+    invoke-virtual {p0, v0}, Lio/flutter/plugins/urllauncher/UrlLauncher;->setActivity(Landroid/app/Activity;)V
+
+    return-void
+.end method
+
+.method public onDetachedFromActivityForConfigChanges()V
+    .locals 0
+
+    invoke-virtual {p0}, Lio/flutter/plugins/urllauncher/UrlLauncherPlugin;->onDetachedFromActivity()V
+
+    return-void
+.end method
+
+.method public onDetachedFromEngine(Lio/flutter/embedding/engine/plugins/FlutterPlugin$FlutterPluginBinding;)V
+    .locals 2
+
+    iget-object v0, p0, Lio/flutter/plugins/urllauncher/UrlLauncherPlugin;->urlLauncher:Lio/flutter/plugins/urllauncher/UrlLauncher;
+
+    if-nez v0, :cond_0
+
+    const-string p0, "UrlLauncherPlugin"
+
+    const-string p1, "Already detached from the engine."
+
+    invoke-static {p0, p1}, Landroid/util/Log;->wtf(Ljava/lang/String;Ljava/lang/String;)I
+
+    return-void
+
+    :cond_0
+    sget-object v0, Lio/flutter/plugins/urllauncher/UrlLauncherApi;->Companion:Lio/flutter/plugins/urllauncher/UrlLauncherApi$Companion;
+
+    invoke-virtual {p1}, Lio/flutter/embedding/engine/plugins/FlutterPlugin$FlutterPluginBinding;->getBinaryMessenger()Lio/flutter/plugin/common/BinaryMessenger;
+
+    move-result-object p1
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, p1, v1}, Lio/flutter/plugins/urllauncher/UrlLauncherApi$Companion;->setUp(Lio/flutter/plugin/common/BinaryMessenger;Lio/flutter/plugins/urllauncher/UrlLauncherApi;)V
+
+    iput-object v1, p0, Lio/flutter/plugins/urllauncher/UrlLauncherPlugin;->urlLauncher:Lio/flutter/plugins/urllauncher/UrlLauncher;
+
+    return-void
+.end method
+
+.method public onReattachedToActivityForConfigChanges(Lio/flutter/embedding/engine/plugins/activity/ActivityPluginBinding;)V
+    .locals 0
+
+    invoke-virtual {p0, p1}, Lio/flutter/plugins/urllauncher/UrlLauncherPlugin;->onAttachedToActivity(Lio/flutter/embedding/engine/plugins/activity/ActivityPluginBinding;)V
+
+    return-void
+.end method

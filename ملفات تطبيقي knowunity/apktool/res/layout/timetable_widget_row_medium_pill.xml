@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/row_root" android:layout_width="match_parent" android:layout_height="24.0dp"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/row_fill" android:layout_width="match_parent" android:layout_height="match_parent" android:src="@drawable/timetable_widget_pill_fill" android:scaleType="fitXY" android:contentDescription="@null" />
+    <FrameLayout android:layout_width="match_parent" android:layout_height="match_parent" android:paddingStart="8.0dp" android:paddingEnd="8.0dp">
+        <include android:layout_gravity="start|center" android:layout_width="wrap_content" android:layout_height="16.0dp" layout="@layout/timetable_widget_row_title" />
+    </FrameLayout>
+</FrameLayout>

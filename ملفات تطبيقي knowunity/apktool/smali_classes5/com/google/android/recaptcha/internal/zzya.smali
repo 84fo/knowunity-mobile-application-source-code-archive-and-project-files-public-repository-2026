@@ -1,0 +1,45 @@
+.class public final Lcom/google/android/recaptcha/internal/zzya;
+.super Lcom/google/android/recaptcha/internal/zzsh;
+.source "SourceFile"
+
+# interfaces
+.implements Lcom/google/android/recaptcha/internal/zztt;
+
+
+# direct methods
+.method private constructor <init>()V
+    .locals 0
+
+    .line 8
+    const/4 p0, 0x0
+
+    throw p0
+.end method
+
+.method public synthetic constructor <init>(Lcom/google/android/recaptcha/internal/zzyc;)V
+    .locals 0
+
+    invoke-static {}, Lcom/google/android/recaptcha/internal/zzyb;->zzg()Lcom/google/android/recaptcha/internal/zzyb;
+
+    move-result-object p1
+
+    invoke-direct {p0, p1}, Lcom/google/android/recaptcha/internal/zzsh;-><init>(Lcom/google/android/recaptcha/internal/zzsn;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final zze(Ljava/lang/String;)Lcom/google/android/recaptcha/internal/zzya;
+    .locals 1
+
+    invoke-virtual {p0}, Lcom/google/android/recaptcha/internal/zzsh;->zzn()V
+
+    iget-object v0, p0, Lcom/google/android/recaptcha/internal/zzsh;->zza:Lcom/google/android/recaptcha/internal/zzsn;
+
+    check-cast v0, Lcom/google/android/recaptcha/internal/zzyb;
+
+    invoke-static {v0, p1}, Lcom/google/android/recaptcha/internal/zzyb;->zzi(Lcom/google/android/recaptcha/internal/zzyb;Ljava/lang/String;)V
+
+    return-object p0
+.end method

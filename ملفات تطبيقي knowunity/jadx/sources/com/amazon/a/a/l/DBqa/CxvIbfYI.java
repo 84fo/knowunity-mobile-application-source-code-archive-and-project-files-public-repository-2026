@@ -1,0 +1,58 @@
+package com.amazon.a.a.l.DBqa;
+
+/* JADX INFO: loaded from: classes.dex */
+public class CxvIbfYI {
+    public static String ABfsbiTy;
+    public static String ATfyZKnZHJhFi;
+    public static String ATlojYxRpm;
+    public static String AvtlqFVlqJgLR;
+    public static String BFTiNnCmKAnOg;
+    public static String BYVuLpV;
+    public static String CBnc;
+    public static String FJb;
+    public static String FZeriLIPu;
+    public static String GgDjIgmIeW;
+    public static String HNpCNBm;
+    public static String Hab;
+    public static String JPYSMLw;
+    public static String LVtiGisWtm;
+    public static String NFP;
+    public static String PDyl;
+    public static String PKnZwJr;
+    public static String QgNlVvNwktnL;
+    public static String TbldI;
+    public static String ULbayusoNLXH;
+    public static String WdhfOUSlhdT;
+    public static String XUrfafCZ;
+    public static String Xlj;
+    public static String YRrdvBqhXqifsz;
+    public static String YWL;
+    public static String YpDdB;
+    public static String YssBGrjAcf;
+    public static String ZFfLkVO;
+    public static String ZzOAPjybkIvwzmO;
+    public static String aQaBr;
+    public static String akb;
+    public static String cOZQouQXGpK;
+    public static String ewGIOxfklokuk;
+    public static String fVxMvFwlqW;
+    public static String gJZiQGSmqGPlm;
+    public static String iDo;
+    public static String iXBKqNolAcaziY;
+    public static String kKuJCvnNICROOr;
+    public static String kwXN;
+    public static String lNRJvhagtIPcXz;
+    public static String lWXMEL;
+    public static String lnnolTEekuPBa;
+    public static String ltmRcxfuSk;
+    public static String pCaOIYPy;
+    public static String poVMLOu;
+    public static String rmHYareeWWi;
+    public static String uAVQNRchFBtY;
+    public static String uaGBWNgPtXvZDR;
+    public static String vERTHcZyXbwE;
+    public static String wtBXxcDxvZTXW;
+    public static String yHYx;
+    public static String yzPKdpmB;
+    public static String zroVx;
+}

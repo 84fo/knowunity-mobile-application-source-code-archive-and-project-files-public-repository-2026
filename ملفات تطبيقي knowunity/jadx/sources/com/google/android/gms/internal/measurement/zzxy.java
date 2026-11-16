@@ -1,0 +1,8 @@
+package com.google.android.gms.internal.measurement;
+
+/* JADX INFO: loaded from: classes5.dex */
+final class zzxy extends IllegalStateException {
+    public zzxy(String str) {
+        super(str);
+    }
+}

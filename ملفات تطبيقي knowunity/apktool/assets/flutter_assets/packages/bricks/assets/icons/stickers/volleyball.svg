@@ -1,0 +1,9 @@
+<svg width="150" height="150" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="15" cy="15" r="12" fill="#ff0000"/>
+<path d="M15 6C16.35 8.48 16.35 12.52 15 15C12.17 15.07 8.68 17.09 7.2 19.5" stroke="#3cff00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M15 15C16.48 17.41 19.97 19.43 22.79 19.5" stroke="#3cff00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M10.5 16.43C12.21 19.21 15.4 21.69 18.82 23.14" stroke="#3cff00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M6.03999 14.15C9.02999 11.96 12.76 10.47 16.01 10.39" stroke="#3cff00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M18.49 18.18C20.05 15.31 20.6 11.31 20.16 7.63" stroke="#3cff00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M24 15C24 19.97 19.97 24 15 24C10.03 24 6 19.97 6 15C6 10.03 10.03 6 15 6C19.97 6 24 10.03 24 15Z" stroke="#3cff00" stroke-width="2"/>
+</svg>

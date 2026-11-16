@@ -1,0 +1,23 @@
+package com.google.android.gms.internal.ads;
+
+import com.google.android.gms.common.util.Clock;
+
+/* JADX INFO: loaded from: classes4.dex */
+public final class zzezf implements zzipf {
+    private final zzipo zza;
+    private final zzipo zzb;
+
+    private zzezf(zzipo zzipoVar, zzipo zzipoVar2) {
+        this.zza = zzipoVar;
+        this.zzb = zzipoVar2;
+    }
+
+    public static zzezf zza(zzipo zzipoVar, zzipo zzipoVar2) {
+        return new zzezf(zzipoVar, zzipoVar2);
+    }
+
+    @Override // com.google.android.gms.internal.ads.zzipu, com.google.android.gms.internal.ads.zzipt
+    public final /* bridge */ /* synthetic */ Object zzb() {
+        return new zzflp((Clock) this.zza.zzb(), (zzeaw) this.zzb.zzb());
+    }
+}

@@ -1,0 +1,280 @@
+package androidx.media3.exoplayer;
+
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
+import android.media.AudioManager;
+import android.os.Looper;
+import androidx.media3.common.audio.AudioManagerCompat;
+import androidx.media3.common.util.BackgroundThreadStateHandler;
+import androidx.media3.common.util.Clock;
+import androidx.media3.common.util.Log;
+import defpackage.e61;
+
+/* JADX INFO: loaded from: classes3.dex */
+final class StreamVolumeManager {
+    private static final String TAG = "StreamVolumeManager";
+    private static final String VOLUME_CHANGED_ACTION = "android.media.VOLUME_CHANGED_ACTION";
+    private final Context applicationContext;
+    private AudioManager audioManager;
+    private final Listener listener;
+    private VolumeChangeReceiver receiver;
+    private final BackgroundThreadStateHandler<StreamVolumeState> stateHandler;
+    private int volumeBeforeMute;
+
+    public interface Listener {
+        void onStreamTypeChanged(int i);
+
+        void onStreamVolumeChanged(int i, boolean z);
+    }
+
+    public static final class StreamVolumeState {
+        public final int maxVolume;
+        public final int minVolume;
+        public final boolean muted;
+        public final int streamType;
+        public final int volume;
+
+        public StreamVolumeState(int i, int i2, boolean z, int i3, int i4) {
+            this.streamType = i;
+            this.volume = i2;
+            this.muted = z;
+            this.minVolume = i3;
+            this.maxVolume = i4;
+        }
+    }
+
+    public final class VolumeChangeReceiver extends BroadcastReceiver {
+        private VolumeChangeReceiver() {
+        }
+
+        /* JADX INFO: Access modifiers changed from: private */
+        public /* synthetic */ void lambda$onReceive$0() {
+            if (StreamVolumeManager.this.receiver == null) {
+                return;
+            }
+            StreamVolumeManager.this.stateHandler.setStateInBackground(StreamVolumeManager.this.generateState(((StreamVolumeState) StreamVolumeManager.this.stateHandler.get()).streamType));
+        }
+
+        @Override // android.content.BroadcastReceiver
+        public void onReceive(Context context, Intent intent) {
+            StreamVolumeManager.this.stateHandler.runInBackground(new a(this, (byte) 3));
+        }
+    }
+
+    public StreamVolumeManager(Context context, Listener listener, int i, Looper looper, Looper looper2, Clock clock) {
+        this.applicationContext = context.getApplicationContext();
+        this.listener = listener;
+        BackgroundThreadStateHandler<StreamVolumeState> backgroundThreadStateHandler = new BackgroundThreadStateHandler<>(new StreamVolumeState(i, 0, false, 0, 0), looper, looper2, clock, new e(this, (byte) 10));
+        this.stateHandler = backgroundThreadStateHandler;
+        backgroundThreadStateHandler.runInBackground(new t(this, i, (byte) 1));
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public StreamVolumeState generateState(int i) {
+        this.audioManager.getClass();
+        return new StreamVolumeState(i, AudioManagerCompat.getStreamVolume(this.audioManager, i), AudioManagerCompat.isStreamMute(this.audioManager, i), AudioManagerCompat.getStreamMinVolume(this.audioManager, i), AudioManagerCompat.getStreamMaxVolume(this.audioManager, i));
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public static /* synthetic */ StreamVolumeState lambda$decreaseVolume$7(StreamVolumeState streamVolumeState) {
+        int i = streamVolumeState.streamType;
+        int i2 = streamVolumeState.volume;
+        int i3 = streamVolumeState.minVolume;
+        return new StreamVolumeState(i, i2 > i3 ? i2 - 1 : i3, i2 <= 1, i3, streamVolumeState.maxVolume);
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public StreamVolumeState lambda$decreaseVolume$8(int i, StreamVolumeState streamVolumeState) {
+        if (streamVolumeState.volume <= streamVolumeState.minVolume) {
+            return streamVolumeState;
+        }
+        AudioManager audioManager = this.audioManager;
+        audioManager.getClass();
+        audioManager.adjustStreamVolume(streamVolumeState.streamType, -1, i);
+        return generateState(streamVolumeState.streamType);
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public static /* synthetic */ StreamVolumeState lambda$increaseVolume$5(StreamVolumeState streamVolumeState) {
+        int i = streamVolumeState.streamType;
+        int i2 = streamVolumeState.volume;
+        int i3 = streamVolumeState.maxVolume;
+        return new StreamVolumeState(i, i2 < i3 ? i2 + 1 : i3, false, streamVolumeState.minVolume, i3);
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public StreamVolumeState lambda$increaseVolume$6(int i, StreamVolumeState streamVolumeState) {
+        if (streamVolumeState.volume >= streamVolumeState.maxVolume) {
+            return streamVolumeState;
+        }
+        AudioManager audioManager = this.audioManager;
+        audioManager.getClass();
+        audioManager.adjustStreamVolume(streamVolumeState.streamType, 1, i);
+        return generateState(streamVolumeState.streamType);
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public void lambda$new$0(int i) {
+        AudioManager audioManager = (AudioManager) this.applicationContext.getSystemService("audio");
+        audioManager.getClass();
+        this.audioManager = audioManager;
+        VolumeChangeReceiver volumeChangeReceiver = new VolumeChangeReceiver();
+        try {
+            this.applicationContext.registerReceiver(volumeChangeReceiver, new IntentFilter(VOLUME_CHANGED_ACTION));
+            this.receiver = volumeChangeReceiver;
+        } catch (RuntimeException e) {
+            Log.w(TAG, "Error registering stream volume receiver", e);
+        }
+        this.stateHandler.setStateInBackground(generateState(i));
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public static /* synthetic */ StreamVolumeState lambda$release$11(StreamVolumeState streamVolumeState) {
+        return streamVolumeState;
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public /* synthetic */ StreamVolumeState lambda$release$12(StreamVolumeState streamVolumeState) {
+        VolumeChangeReceiver volumeChangeReceiver = this.receiver;
+        if (volumeChangeReceiver != null) {
+            try {
+                this.applicationContext.unregisterReceiver(volumeChangeReceiver);
+            } catch (RuntimeException e) {
+                Log.w(TAG, "Error unregistering stream volume receiver", e);
+            }
+            this.receiver = null;
+        }
+        return streamVolumeState;
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public StreamVolumeState lambda$setMuted$10(boolean z, int i, StreamVolumeState streamVolumeState) {
+        if (streamVolumeState.muted == z) {
+            return streamVolumeState;
+        }
+        this.audioManager.getClass();
+        this.audioManager.adjustStreamVolume(streamVolumeState.streamType, z ? -100 : 100, i);
+        return generateState(streamVolumeState.streamType);
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public /* synthetic */ StreamVolumeState lambda$setMuted$9(boolean z, StreamVolumeState streamVolumeState) {
+        int i;
+        int i2 = streamVolumeState.streamType;
+        if (streamVolumeState.muted == z) {
+            i = streamVolumeState.volume;
+        } else {
+            i = z ? 0 : this.volumeBeforeMute;
+        }
+        return new StreamVolumeState(i2, i, z, streamVolumeState.minVolume, streamVolumeState.maxVolume);
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public static /* synthetic */ StreamVolumeState lambda$setStreamType$1(int i, StreamVolumeState streamVolumeState) {
+        return new StreamVolumeState(i, streamVolumeState.volume, streamVolumeState.muted, streamVolumeState.minVolume, streamVolumeState.maxVolume);
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public /* synthetic */ StreamVolumeState lambda$setStreamType$2(int i, StreamVolumeState streamVolumeState) {
+        return streamVolumeState.streamType == i ? streamVolumeState : generateState(i);
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public static /* synthetic */ StreamVolumeState lambda$setVolume$3(int i, StreamVolumeState streamVolumeState) {
+        int i2 = streamVolumeState.streamType;
+        int i3 = streamVolumeState.minVolume;
+        return new StreamVolumeState(i2, (i < i3 || i > streamVolumeState.maxVolume) ? streamVolumeState.volume : i, i == 0, i3, streamVolumeState.maxVolume);
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public StreamVolumeState lambda$setVolume$4(int i, int i2, StreamVolumeState streamVolumeState) {
+        if (i == streamVolumeState.volume || i < streamVolumeState.minVolume || i > streamVolumeState.maxVolume) {
+            return streamVolumeState;
+        }
+        AudioManager audioManager = this.audioManager;
+        audioManager.getClass();
+        audioManager.setStreamVolume(streamVolumeState.streamType, i, i2);
+        return generateState(streamVolumeState.streamType);
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public void onStreamVolumeStateChanged(StreamVolumeState streamVolumeState, StreamVolumeState streamVolumeState2) {
+        boolean z = streamVolumeState.muted;
+        if (!z && streamVolumeState2.muted) {
+            this.volumeBeforeMute = streamVolumeState.volume;
+        }
+        int i = streamVolumeState.volume;
+        int i2 = streamVolumeState2.volume;
+        if (i != i2 || z != streamVolumeState2.muted) {
+            this.listener.onStreamVolumeChanged(i2, streamVolumeState2.muted);
+        }
+        int i3 = streamVolumeState.streamType;
+        int i4 = streamVolumeState2.streamType;
+        if (i3 == i4 && streamVolumeState.minVolume == streamVolumeState2.minVolume && streamVolumeState.maxVolume == streamVolumeState2.maxVolume) {
+            return;
+        }
+        this.listener.onStreamTypeChanged(i4);
+    }
+
+    public void decreaseVolume(int i) {
+        this.stateHandler.updateStateAsync(new e0((byte) 2), new g0(this, i, (byte) 1));
+    }
+
+    public int getMaxVolume() {
+        return this.stateHandler.get().maxVolume;
+    }
+
+    public int getMinVolume() {
+        return this.stateHandler.get().minVolume;
+    }
+
+    public int getVolume() {
+        return this.stateHandler.get().volume;
+    }
+
+    public void increaseVolume(int i) {
+        this.stateHandler.updateStateAsync(new e0((byte) 1), new g0(this, i, (byte) 0));
+    }
+
+    public boolean isMuted() {
+        return this.stateHandler.get().muted;
+    }
+
+    public void release() {
+        this.stateHandler.updateStateAsync(new e0((byte) 0), new e61() { // from class: androidx.media3.exoplayer.f0
+            @Override // defpackage.e61
+            public final Object apply(Object obj) {
+                return this.a.lambda$release$12((StreamVolumeManager.StreamVolumeState) obj);
+            }
+        });
+    }
+
+    public void setMuted(final boolean z, final int i) {
+        this.stateHandler.updateStateAsync(new e61() { // from class: androidx.media3.exoplayer.i0
+            @Override // defpackage.e61
+            public final Object apply(Object obj) {
+                return this.a.lambda$setMuted$9(z, (StreamVolumeManager.StreamVolumeState) obj);
+            }
+        }, new e61() { // from class: androidx.media3.exoplayer.j0
+            @Override // defpackage.e61
+            public final Object apply(Object obj) {
+                return this.a.lambda$setMuted$10(z, i, (StreamVolumeManager.StreamVolumeState) obj);
+            }
+        });
+    }
+
+    public void setStreamType(int i) {
+        this.stateHandler.updateStateAsync(new j(i, (byte) 4), new g0(this, i, (byte) 2));
+    }
+
+    public void setVolume(final int i, final int i2) {
+        this.stateHandler.updateStateAsync(new j(i, (byte) 3), new e61() { // from class: androidx.media3.exoplayer.h0
+            @Override // defpackage.e61
+            public final Object apply(Object obj) {
+                return this.a.lambda$setVolume$4(i, i2, (StreamVolumeManager.StreamVolumeState) obj);
+            }
+        });
+    }
+}

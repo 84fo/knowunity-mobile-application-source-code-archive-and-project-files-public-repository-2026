@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<appwidget-provider android:description="@string/timetable_widget_description" android:minWidth="250.0dp" android:minHeight="110.0dp" android:updatePeriodMillis="1800000" android:initialLayout="@layout/timetable_widget_logged_out" android:previewImage="@drawable/timetable_widget_preview_image" android:resizeMode="horizontal|vertical" android:minResizeWidth="110.0dp" android:minResizeHeight="110.0dp" android:widgetCategory="home_screen" android:previewLayout="@layout/timetable_widget_preview" android:targetCellWidth="4" android:targetCellHeight="2"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

@@ -1,0 +1,207 @@
+.class public final Lcom/google/android/gms/measurement/internal/zzhb;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# static fields
+.field private static zza:Lcom/google/android/gms/measurement/internal/zzhb;
+
+
+# instance fields
+.field private final zzb:Lcom/google/android/gms/measurement/internal/zzii;
+
+.field private final zzc:Lcom/google/android/gms/common/internal/TelemetryLoggingClient;
+
+.field private final zzd:Ljava/util/concurrent/atomic/AtomicLong;
+
+
+# direct methods
+.method private constructor <init>(Landroid/content/Context;Lcom/google/android/gms/measurement/internal/zzii;)V
+    .locals 3
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicLong;
+
+    const-wide/16 v1, -0x1
+
+    invoke-direct {v0, v1, v2}, Ljava/util/concurrent/atomic/AtomicLong;-><init>(J)V
+
+    iput-object v0, p0, Lcom/google/android/gms/measurement/internal/zzhb;->zzd:Ljava/util/concurrent/atomic/AtomicLong;
+
+    invoke-static {}, Lcom/google/android/gms/common/internal/TelemetryLoggingOptions;->builder()Lcom/google/android/gms/common/internal/TelemetryLoggingOptions$Builder;
+
+    move-result-object v0
+
+    const-string v1, "measurement:api"
+
+    invoke-virtual {v0, v1}, Lcom/google/android/gms/common/internal/TelemetryLoggingOptions$Builder;->setApi(Ljava/lang/String;)Lcom/google/android/gms/common/internal/TelemetryLoggingOptions$Builder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/google/android/gms/common/internal/TelemetryLoggingOptions$Builder;->build()Lcom/google/android/gms/common/internal/TelemetryLoggingOptions;
+
+    move-result-object v0
+
+    invoke-static {p1, v0}, Lcom/google/android/gms/common/internal/TelemetryLogging;->getClient(Landroid/content/Context;Lcom/google/android/gms/common/internal/TelemetryLoggingOptions;)Lcom/google/android/gms/common/internal/TelemetryLoggingClient;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lcom/google/android/gms/measurement/internal/zzhb;->zzc:Lcom/google/android/gms/common/internal/TelemetryLoggingClient;
+
+    iput-object p2, p0, Lcom/google/android/gms/measurement/internal/zzhb;->zzb:Lcom/google/android/gms/measurement/internal/zzii;
+
+    return-void
+.end method
+
+.method public static zza(Lcom/google/android/gms/measurement/internal/zzii;)Lcom/google/android/gms/measurement/internal/zzhb;
+    .locals 2
+
+    sget-object v0, Lcom/google/android/gms/measurement/internal/zzhb;->zza:Lcom/google/android/gms/measurement/internal/zzhb;
+
+    if-nez v0, :cond_0
+
+    new-instance v0, Lcom/google/android/gms/measurement/internal/zzhb;
+
+    invoke-virtual {p0}, Lcom/google/android/gms/measurement/internal/zzii;->zzbe()Landroid/content/Context;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1, p0}, Lcom/google/android/gms/measurement/internal/zzhb;-><init>(Landroid/content/Context;Lcom/google/android/gms/measurement/internal/zzii;)V
+
+    sput-object v0, Lcom/google/android/gms/measurement/internal/zzhb;->zza:Lcom/google/android/gms/measurement/internal/zzhb;
+
+    :cond_0
+    return-object v0
+.end method
+
+
+# virtual methods
+.method public final declared-synchronized zzb(IIJJI)V
+    .locals 17
+
+    move-object/from16 v1, p0
+
+    monitor-enter p0
+
+    :try_start_0
+    iget-object v0, v1, Lcom/google/android/gms/measurement/internal/zzhb;->zzb:Lcom/google/android/gms/measurement/internal/zzii;
+
+    invoke-virtual {v0}, Lcom/google/android/gms/measurement/internal/zzii;->zzbf()Lcom/google/android/gms/common/util/Clock;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Lcom/google/android/gms/common/util/Clock;->elapsedRealtime()J
+
+    move-result-wide v2
+
+    iget-object v0, v1, Lcom/google/android/gms/measurement/internal/zzhb;->zzd:Ljava/util/concurrent/atomic/AtomicLong;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicLong;->get()J
+
+    move-result-wide v4
+
+    const-wide/16 v6, -0x1
+
+    cmp-long v4, v4, v6
+
+    if-nez v4, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicLong;->get()J
+
+    move-result-wide v4
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    sub-long v4, v2, v4
+
+    const-wide/32 v6, 0x1b7740
+
+    cmp-long v0, v4, v6
+
+    if-gtz v0, :cond_1
+
+    monitor-exit p0
+
+    return-void
+
+    :cond_1
+    :goto_0
+    :try_start_1
+    iget-object v0, v1, Lcom/google/android/gms/measurement/internal/zzhb;->zzc:Lcom/google/android/gms/common/internal/TelemetryLoggingClient;
+
+    new-instance v4, Lcom/google/android/gms/common/internal/TelemetryData;
+
+    new-instance v5, Lcom/google/android/gms/common/internal/MethodInvocation;
+
+    const/4 v14, 0x0
+
+    const/4 v15, 0x0
+
+    const v6, 0x8dcd
+
+    const/4 v8, 0x0
+
+    const/4 v13, 0x0
+
+    move/from16 v7, p2
+
+    move-wide/from16 v9, p3
+
+    move-wide/from16 v11, p5
+
+    move/from16 v16, p7
+
+    invoke-direct/range {v5 .. v16}, Lcom/google/android/gms/common/internal/MethodInvocation;-><init>(IIIJJLjava/lang/String;Ljava/lang/String;II)V
+
+    filled-new-array {v5}, [Lcom/google/android/gms/common/internal/MethodInvocation;
+
+    move-result-object v5
+
+    invoke-static {v5}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v5
+
+    const/4 v6, 0x0
+
+    invoke-direct {v4, v6, v5}, Lcom/google/android/gms/common/internal/TelemetryData;-><init>(ILjava/util/List;)V
+
+    invoke-interface {v0, v4}, Lcom/google/android/gms/common/internal/TelemetryLoggingClient;->log(Lcom/google/android/gms/common/internal/TelemetryData;)Lcom/google/android/gms/tasks/Task;
+
+    move-result-object v0
+
+    new-instance v4, Lcom/google/android/gms/measurement/internal/zzha;
+
+    invoke-direct {v4, v1, v2, v3}, Lcom/google/android/gms/measurement/internal/zzha;-><init>(Lcom/google/android/gms/measurement/internal/zzhb;J)V
+
+    invoke-virtual {v0, v4}, Lcom/google/android/gms/tasks/Task;->addOnFailureListener(Lcom/google/android/gms/tasks/OnFailureListener;)Lcom/google/android/gms/tasks/Task;
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    monitor-exit p0
+
+    return-void
+
+    :catchall_0
+    move-exception v0
+
+    :try_start_2
+    monitor-exit p0
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    throw v0
+.end method
+
+.method public final synthetic zzc(JLjava/lang/Exception;)V
+    .locals 0
+
+    iget-object p0, p0, Lcom/google/android/gms/measurement/internal/zzhb;->zzd:Ljava/util/concurrent/atomic/AtomicLong;
+
+    invoke-virtual {p0, p1, p2}, Ljava/util/concurrent/atomic/AtomicLong;->set(J)V
+
+    return-void
+.end method

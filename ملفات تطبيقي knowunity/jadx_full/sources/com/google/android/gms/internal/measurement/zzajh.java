@@ -1,0 +1,42 @@
+package com.google.android.gms.internal.measurement;
+
+/* JADX INFO: loaded from: classes5.dex */
+public interface zzajh {
+    boolean zza();
+
+    boolean zzb();
+
+    boolean zzc();
+
+    boolean zzd();
+
+    boolean zze();
+
+    boolean zzf();
+
+    boolean zzg();
+
+    boolean zzh();
+
+    boolean zzi();
+
+    boolean zzj();
+
+    boolean zzk();
+
+    boolean zzl();
+
+    boolean zzm();
+
+    boolean zzn();
+
+    boolean zzo();
+
+    boolean zzp();
+
+    boolean zzq();
+
+    boolean zzr();
+
+    boolean zzs();
+}

@@ -1,0 +1,405 @@
+{
+  "schema": 3,
+  "package": "app",
+  "entries": [
+    {
+      "family": "scene",
+      "id": "hook/assets/knowie_run/knowie",
+      "file": "scene.knowie.d8fd755c.fsceneb",
+      "stamp": "324671e4ef35fa10",
+      "source": "hook/assets/knowie_run/knowie.glb"
+    },
+    {
+      "family": "scene",
+      "id": "hook/assets/knowie_run/props/answer_gate",
+      "file": "scene.answer_gate.b5e7a246.fsceneb",
+      "stamp": "0a597dfdbc4648ca",
+      "source": "hook/assets/knowie_run/props/answer_gate.glb"
+    },
+    {
+      "family": "scene",
+      "id": "hook/assets/knowie_run/props/big_book_a",
+      "file": "scene.big_book_a.7c80366b.fsceneb",
+      "stamp": "35f1b3b43c87de56",
+      "source": "hook/assets/knowie_run/props/big_book_a.glb"
+    },
+    {
+      "family": "scene",
+      "id": "hook/assets/knowie_run/props/big_book_b",
+      "file": "scene.big_book_b.7c803336.fsceneb",
+      "stamp": "196192e14762cee5",
+      "source": "hook/assets/knowie_run/props/big_book_b.glb"
+    },
+    {
+      "family": "scene",
+      "id": "hook/assets/knowie_run/props/big_book_c",
+      "file": "scene.big_book_c.7c8030c1.fsceneb",
+      "stamp": "3617b3a42f488cc2",
+      "source": "hook/assets/knowie_run/props/big_book_c.glb"
+    },
+    {
+      "family": "scene",
+      "id": "hook/assets/knowie_run/props/book_stack",
+      "file": "scene.book_stack.17202ab2.fsceneb",
+      "stamp": "b082b39878e918f0",
+      "source": "hook/assets/knowie_run/props/book_stack.glb"
+    },
+    {
+      "family": "scene",
+      "id": "hook/assets/knowie_run/props/book_stack_large",
+      "file": "scene.book_stack_large.50faf1a3.fsceneb",
+      "stamp": "8abf5c1cf9e7e23f",
+      "source": "hook/assets/knowie_run/props/book_stack_large.glb"
+    },
+    {
+      "family": "scene",
+      "id": "hook/assets/knowie_run/props/crayon_box",
+      "file": "scene.crayon_box.52c87820.fsceneb",
+      "stamp": "32cde4c36c754238",
+      "source": "hook/assets/knowie_run/props/crayon_box.glb"
+    },
+    {
+      "family": "scene",
+      "id": "hook/assets/knowie_run/props/desk_lamp",
+      "file": "scene.desk_lamp.0fc3a2df.fsceneb",
+      "stamp": "95279fc7b9e15a4d",
+      "source": "hook/assets/knowie_run/props/desk_lamp.glb"
+    },
+    {
+      "family": "scene",
+      "id": "hook/assets/knowie_run/props/desk_segment",
+      "file": "scene.desk_segment.f2cbd7e4.fsceneb",
+      "stamp": "a7cae84652f6247c",
+      "source": "hook/assets/knowie_run/props/desk_segment.glb"
+    },
+    {
+      "family": "scene",
+      "id": "hook/assets/knowie_run/props/eraser",
+      "file": "scene.eraser.bedbcd5a.fsceneb",
+      "stamp": "905f880c0813c1ba",
+      "source": "hook/assets/knowie_run/props/eraser.glb"
+    },
+    {
+      "family": "scene",
+      "id": "hook/assets/knowie_run/props/finish_line",
+      "file": "scene.finish_line.172ab94b.fsceneb",
+      "stamp": "7c72582dd3ab0063",
+      "source": "hook/assets/knowie_run/props/finish_line.glb"
+    },
+    {
+      "family": "scene",
+      "id": "hook/assets/knowie_run/props/flash_cards",
+      "file": "scene.flash_cards.3e8d437c.fsceneb",
+      "stamp": "879c8a7a6c49f8f4",
+      "source": "hook/assets/knowie_run/props/flash_cards.glb"
+    },
+    {
+      "family": "scene",
+      "id": "hook/assets/knowie_run/props/highlighters",
+      "file": "scene.highlighters.02f0465e.fsceneb",
+      "stamp": "a65ab69cc574e7bd",
+      "source": "hook/assets/knowie_run/props/highlighters.glb"
+    },
+    {
+      "family": "scene",
+      "id": "hook/assets/knowie_run/props/mug_pencils",
+      "file": "scene.mug_pencils.3d3a1d10.fsceneb",
+      "stamp": "ddf9001c05edef0c",
+      "source": "hook/assets/knowie_run/props/mug_pencils.glb"
+    },
+    {
+      "family": "scene",
+      "id": "hook/assets/knowie_run/props/paper_clip",
+      "file": "scene.paper_clip.0741a98c.fsceneb",
+      "stamp": "734ffaf587a1d6c6",
+      "source": "hook/assets/knowie_run/props/paper_clip.glb"
+    },
+    {
+      "family": "scene",
+      "id": "hook/assets/knowie_run/props/paper_segment",
+      "file": "scene.paper_segment.1c38880a.fsceneb",
+      "stamp": "531e87f558c243e0",
+      "source": "hook/assets/knowie_run/props/paper_segment.glb"
+    },
+    {
+      "family": "scene",
+      "id": "hook/assets/knowie_run/props/pencil_case",
+      "file": "scene.pencil_case.dbb873e7.fsceneb",
+      "stamp": "f3c37a05b6d54961",
+      "source": "hook/assets/knowie_run/props/pencil_case.glb"
+    },
+    {
+      "family": "scene",
+      "id": "hook/assets/knowie_run/props/pencil_case_long_blue_end",
+      "file": "scene.pencil_case_long_blue_end.61681a5d.fsceneb",
+      "stamp": "c05cd06fe201fd16",
+      "source": "hook/assets/knowie_run/props/pencil_case_long_blue_end.glb"
+    },
+    {
+      "family": "scene",
+      "id": "hook/assets/knowie_run/props/pencil_case_long_blue_mid",
+      "file": "scene.pencil_case_long_blue_mid.0594a17a.fsceneb",
+      "stamp": "d051ebef03daa8c3",
+      "source": "hook/assets/knowie_run/props/pencil_case_long_blue_mid.glb"
+    },
+    {
+      "family": "scene",
+      "id": "hook/assets/knowie_run/props/pencil_case_long_coral_end",
+      "file": "scene.pencil_case_long_coral_end.1bc75c16.fsceneb",
+      "stamp": "5f1831b4b4a3bdea",
+      "source": "hook/assets/knowie_run/props/pencil_case_long_coral_end.glb"
+    },
+    {
+      "family": "scene",
+      "id": "hook/assets/knowie_run/props/pencil_case_long_coral_mid",
+      "file": "scene.pencil_case_long_coral_mid.e8404421.fsceneb",
+      "stamp": "d32c0461c12292af",
+      "source": "hook/assets/knowie_run/props/pencil_case_long_coral_mid.glb"
+    },
+    {
+      "family": "scene",
+      "id": "hook/assets/knowie_run/props/pencil_case_long_gold_end",
+      "file": "scene.pencil_case_long_gold_end.a27dcfb6.fsceneb",
+      "stamp": "38096c9737f0fe7b",
+      "source": "hook/assets/knowie_run/props/pencil_case_long_gold_end.glb"
+    },
+    {
+      "family": "scene",
+      "id": "hook/assets/knowie_run/props/pencil_case_long_gold_mid",
+      "file": "scene.pencil_case_long_gold_mid.803dce69.fsceneb",
+      "stamp": "4a359070ad31cad2",
+      "source": "hook/assets/knowie_run/props/pencil_case_long_gold_mid.glb"
+    },
+    {
+      "family": "scene",
+      "id": "hook/assets/knowie_run/props/pencil_case_long_green_end",
+      "file": "scene.pencil_case_long_green_end.c9d25fbd.fsceneb",
+      "stamp": "b93cc613858ecee6",
+      "source": "hook/assets/knowie_run/props/pencil_case_long_green_end.glb"
+    },
+    {
+      "family": "scene",
+      "id": "hook/assets/knowie_run/props/pencil_case_long_green_mid",
+      "file": "scene.pencil_case_long_green_mid.7b90dc32.fsceneb",
+      "stamp": "b52aaf42a47bf2e8",
+      "source": "hook/assets/knowie_run/props/pencil_case_long_green_mid.glb"
+    },
+    {
+      "family": "scene",
+      "id": "hook/assets/knowie_run/props/pencil_case_long_magenta_end",
+      "file": "scene.pencil_case_long_magenta_end.6ded55cb.fsceneb",
+      "stamp": "9dc5f1382dbae686",
+      "source": "hook/assets/knowie_run/props/pencil_case_long_magenta_end.glb"
+    },
+    {
+      "family": "scene",
+      "id": "hook/assets/knowie_run/props/pencil_case_long_magenta_mid",
+      "file": "scene.pencil_case_long_magenta_mid.dd34b764.fsceneb",
+      "stamp": "359d8938afb04763",
+      "source": "hook/assets/knowie_run/props/pencil_case_long_magenta_mid.glb"
+    },
+    {
+      "family": "scene",
+      "id": "hook/assets/knowie_run/props/pencil_stack",
+      "file": "scene.pencil_stack.e419547b.fsceneb",
+      "stamp": "b890bc19ab5b7c90",
+      "source": "hook/assets/knowie_run/props/pencil_stack.glb"
+    },
+    {
+      "family": "scene",
+      "id": "hook/assets/knowie_run/props/potted_cactus",
+      "file": "scene.potted_cactus.8199fc96.fsceneb",
+      "stamp": "0e6af981f5d85995",
+      "source": "hook/assets/knowie_run/props/potted_cactus.glb"
+    },
+    {
+      "family": "scene",
+      "id": "hook/assets/knowie_run/props/ruler",
+      "file": "scene.ruler.29b8052e.fsceneb",
+      "stamp": "52f0a852e54efc4f",
+      "source": "hook/assets/knowie_run/props/ruler.glb"
+    },
+    {
+      "family": "scene",
+      "id": "hook/assets/knowie_run/props/ruler_bridge",
+      "file": "scene.ruler_bridge.9980348e.fsceneb",
+      "stamp": "556c878046c915c0",
+      "source": "hook/assets/knowie_run/props/ruler_bridge.glb"
+    },
+    {
+      "family": "scene",
+      "id": "hook/assets/knowie_run/props/ruler_bridge_2lane",
+      "file": "scene.ruler_bridge_2lane.de9c0a94.fsceneb",
+      "stamp": "1f81f0a2c2ad19c2",
+      "source": "hook/assets/knowie_run/props/ruler_bridge_2lane.glb"
+    },
+    {
+      "family": "scene",
+      "id": "hook/assets/knowie_run/props/ruler_wall",
+      "file": "scene.ruler_wall.e9328c98.fsceneb",
+      "stamp": "732b0981d57443df",
+      "source": "hook/assets/knowie_run/props/ruler_wall.glb"
+    },
+    {
+      "family": "scene",
+      "id": "hook/assets/knowie_run/props/ruler_wall_2lane",
+      "file": "scene.ruler_wall_2lane.b3142055.fsceneb",
+      "stamp": "50571959589ccb97",
+      "source": "hook/assets/knowie_run/props/ruler_wall_2lane.glb"
+    },
+    {
+      "family": "scene",
+      "id": "hook/assets/knowie_run/props/sharpener",
+      "file": "scene.sharpener.e80e77a7.fsceneb",
+      "stamp": "80d64f09bc578779",
+      "source": "hook/assets/knowie_run/props/sharpener.glb"
+    },
+    {
+      "family": "scene",
+      "id": "hook/assets/knowie_run/props/spiral_binding",
+      "file": "scene.spiral_binding.6988b324.fsceneb",
+      "stamp": "79eefa98fa2edd26",
+      "source": "hook/assets/knowie_run/props/spiral_binding.glb"
+    },
+    {
+      "family": "scene",
+      "id": "hook/assets/knowie_run/props/star",
+      "file": "scene.star.6a3e82a2.fsceneb",
+      "stamp": "ace6f2781e8bdfbd",
+      "source": "hook/assets/knowie_run/props/star.glb"
+    },
+    {
+      "family": "scene",
+      "id": "hook/assets/knowie_run/props/sticky_notes",
+      "file": "scene.sticky_notes.168ddaa6.fsceneb",
+      "stamp": "9e4e3fc36f842506",
+      "source": "hook/assets/knowie_run/props/sticky_notes.glb"
+    },
+    {
+      "family": "scene",
+      "id": "hook/assets/knowie_run/props/test_tube_rack",
+      "file": "scene.test_tube_rack.3bf94c2f.fsceneb",
+      "stamp": "fa70f5a7bde13c52",
+      "source": "hook/assets/knowie_run/props/test_tube_rack.glb"
+    },
+    {
+      "family": "scene",
+      "id": "hook/assets/knowie_run/props/wall_backdrop",
+      "file": "scene.wall_backdrop.7a330311.fsceneb",
+      "stamp": "8501e7599ee5e6e7",
+      "source": "hook/assets/knowie_run/props/wall_backdrop.glb"
+    },
+    {
+      "family": "scene",
+      "id": "hook/assets/knowie_run/tear_drop",
+      "file": "scene.tear_drop.d937188e.fsceneb",
+      "stamp": "363041e7eca8a329",
+      "source": "hook/assets/knowie_run/tear_drop.glb"
+    },
+    {
+      "family": "material",
+      "id": "materials",
+      "file": "metal_desktop/material.materials.4f6ec050.index.json",
+      "stamp": "9200ba205460b748",
+      "target": "metalDesktop"
+    },
+    {
+      "family": "material",
+      "id": "materials",
+      "file": "metal_ios/material.materials.d4c537e6.index.json",
+      "stamp": "aa368c37d065222f",
+      "target": "metalIos"
+    },
+    {
+      "family": "material",
+      "id": "materials",
+      "file": "opengl_es_vulkan/material.materials.aa65afde.index.json",
+      "stamp": "1cad5ded7b3a056b",
+      "target": "openglEs,vulkan"
+    },
+    {
+      "family": "material",
+      "id": "materials#shaderbundle",
+      "file": "metal_desktop/material.materials.4f6ec050.shaderbundle",
+      "stamp": "9200ba205460b748",
+      "target": "metalDesktop"
+    },
+    {
+      "family": "material",
+      "id": "materials#shaderbundle",
+      "file": "metal_ios/material.materials.d4c537e6.shaderbundle",
+      "stamp": "aa368c37d065222f",
+      "target": "metalIos"
+    },
+    {
+      "family": "material",
+      "id": "materials#shaderbundle",
+      "file": "opengl_es_vulkan/material.materials.aa65afde.shaderbundle",
+      "stamp": "1cad5ded7b3a056b",
+      "target": "openglEs,vulkan"
+    },
+    {
+      "family": "material",
+      "id": "materials#sidecar",
+      "file": "metal_desktop/material.materials.4f6ec050.fmat.json",
+      "stamp": "9200ba205460b748",
+      "target": "metalDesktop"
+    },
+    {
+      "family": "material",
+      "id": "materials#sidecar",
+      "file": "metal_ios/material.materials.d4c537e6.fmat.json",
+      "stamp": "aa368c37d065222f",
+      "target": "metalIos"
+    },
+    {
+      "family": "material",
+      "id": "materials#sidecar",
+      "file": "opengl_es_vulkan/material.materials.aa65afde.fmat.json",
+      "stamp": "1cad5ded7b3a056b",
+      "target": "openglEs,vulkan"
+    },
+    {
+      "family": "texture",
+      "id": "hook/assets/knowie_run/knowie_eyes_closed",
+      "file": "texture.knowie_eyes_closed.6ba05d0c.fstex",
+      "stamp": "cb73b4386091974b",
+      "source": "hook/assets/knowie_run/knowie_eyes_closed.png"
+    },
+    {
+      "family": "texture",
+      "id": "hook/assets/knowie_run/knowie_eyes_happy",
+      "file": "texture.knowie_eyes_happy.ee122e43.fstex",
+      "stamp": "fe9cb5569beac25d",
+      "source": "hook/assets/knowie_run/knowie_eyes_happy.png"
+    },
+    {
+      "family": "texture",
+      "id": "hook/assets/knowie_run/knowie_eyes_sad",
+      "file": "texture.knowie_eyes_sad.fa95c0a6.fstex",
+      "stamp": "0a2a16629fd211a1",
+      "source": "hook/assets/knowie_run/knowie_eyes_sad.png"
+    },
+    {
+      "family": "shaderBundle",
+      "id": "knowie_run",
+      "file": "metal_desktop/shaderbundle.knowie_run.a10dd805.shaderbundle",
+      "stamp": "ffde0978810b0ae6",
+      "target": "metalDesktop"
+    },
+    {
+      "family": "shaderBundle",
+      "id": "knowie_run",
+      "file": "metal_ios/shaderbundle.knowie_run.1cdea605.shaderbundle",
+      "stamp": "f2c28eecce53c819",
+      "target": "metalIos"
+    },
+    {
+      "family": "shaderBundle",
+      "id": "knowie_run",
+      "file": "opengl_es_vulkan/shaderbundle.knowie_run.f02eb6b6.shaderbundle",
+      "stamp": "33070008c88de844",
+      "target": "openglEs,vulkan"
+    }
+  ]
+}

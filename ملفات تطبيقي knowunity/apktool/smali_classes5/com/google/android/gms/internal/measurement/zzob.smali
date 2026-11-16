@@ -1,0 +1,39 @@
+.class public final Lcom/google/android/gms/internal/measurement/zzob;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# direct methods
+.method public static final varargs zza(Ljava/util/logging/Level;Ljava/util/concurrent/Executor;Ljava/lang/String;[Ljava/lang/Object;)V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    invoke-static {p0, p1, v0, p2, p3}, Lcom/google/android/gms/internal/measurement/zzob;->zzc(Ljava/util/logging/Level;Ljava/util/concurrent/Executor;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    return-void
+.end method
+
+.method public static final varargs zzb(Ljava/util/logging/Level;Ljava/util/concurrent/Executor;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+    .locals 0
+
+    invoke-static {p0, p1, p2, p3, p4}, Lcom/google/android/gms/internal/measurement/zzob;->zzc(Ljava/util/logging/Level;Ljava/util/concurrent/Executor;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    return-void
+.end method
+
+.method private static final varargs zzc(Ljava/util/logging/Level;Ljava/util/concurrent/Executor;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+    .locals 1
+
+    new-instance v0, Lcom/google/android/gms/internal/measurement/zzoa;
+
+    invoke-direct {v0, p0, p2, p3, p4}, Lcom/google/android/gms/internal/measurement/zzoa;-><init>(Ljava/util/logging/Level;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    invoke-static {v0}, Lcom/google/android/gms/internal/measurement/zzzc;->zza(Ljava/lang/Runnable;)Ljava/lang/Runnable;
+
+    move-result-object p0
+
+    invoke-interface {p1, p0}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+
+    return-void
+.end method

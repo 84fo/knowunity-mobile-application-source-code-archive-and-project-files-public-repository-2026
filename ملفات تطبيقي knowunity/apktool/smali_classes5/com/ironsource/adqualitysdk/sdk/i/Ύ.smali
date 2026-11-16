@@ -1,0 +1,31 @@
+.class public abstract Lcom/ironsource/adqualitysdk/sdk/i/Ύ;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# static fields
+.field public static final ﾒ:Ljava/lang/String;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 2
+
+    const-string v0, "l3B6weqIAvuvR2//zpIO4aJTTtrulgr7uWY=\n"
+
+    const-string v1, "1hQrtIvka48=\n"
+
+    invoke-static {v0, v1}, Lcom/ironsource/adqualitysdk/sdk/StringFog;->decrypt(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lcom/ironsource/adqualitysdk/sdk/i/Ύ;->ﾒ:Ljava/lang/String;
+
+    const-string v0, "S6QIuuySO1ZevDq4p5o=\n"
+
+    const-string v1, "Lchp3cL0UiQ=\n"
+
+    invoke-static {v0, v1}, Lcom/ironsource/adqualitysdk/sdk/StringFog;->decrypt(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    return-void
+.end method

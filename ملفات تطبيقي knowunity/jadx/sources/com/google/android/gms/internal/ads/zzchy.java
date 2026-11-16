@@ -1,0 +1,8 @@
+package com.google.android.gms.internal.ads;
+
+/* JADX INFO: loaded from: classes4.dex */
+public class zzchy {
+    public static final boolean zza(zzcir zzcirVar) {
+        return zzcirVar.zzN().zzg();
+    }
+}

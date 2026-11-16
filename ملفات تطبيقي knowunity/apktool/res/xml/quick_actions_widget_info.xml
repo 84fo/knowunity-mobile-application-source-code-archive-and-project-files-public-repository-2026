@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<appwidget-provider android:description="@string/quick_actions_description" android:minWidth="144.0dp" android:minHeight="110.0dp" android:updatePeriodMillis="0" android:initialLayout="@layout/quick_actions_widget" android:previewImage="@drawable/quick_actions_widget_preview" android:resizeMode="none" android:widgetCategory="home_screen" android:previewLayout="@layout/quick_actions_widget" android:targetCellWidth="2" android:targetCellHeight="2"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

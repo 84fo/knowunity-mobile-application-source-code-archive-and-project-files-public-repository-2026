@@ -1,0 +1,6 @@
+package com.adjust.sdk.sig;
+
+/* JADX INFO: loaded from: classes3.dex */
+public interface s0 {
+    Object a(Object obj);
+}

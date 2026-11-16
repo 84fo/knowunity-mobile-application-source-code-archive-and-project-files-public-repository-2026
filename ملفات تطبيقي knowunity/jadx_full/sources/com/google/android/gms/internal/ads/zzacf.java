@@ -1,0 +1,15 @@
+package com.google.android.gms.internal.ads;
+
+/* JADX INFO: loaded from: classes4.dex */
+public final class zzacf {
+    public zzacf(int i) {
+    }
+
+    public static final int zza(int i) {
+        return i == 7 ? 6 : 3;
+    }
+
+    public zzacf() {
+        throw null;
+    }
+}

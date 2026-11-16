@@ -1,0 +1,281 @@
+.class public final Lcom/google/android/gms/ads/internal/client/zzfb;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lcom/google/android/gms/ads/MediaContent;
+
+
+# instance fields
+.field private final zza:Lcom/google/android/gms/internal/ads/zzbnd;
+
+.field private final zzb:Lcom/google/android/gms/ads/VideoController;
+
+.field private final zzc:Lcom/google/android/gms/internal/ads/zzbnx;
+
+
+# direct methods
+.method public constructor <init>(Lcom/google/android/gms/internal/ads/zzbnd;Lcom/google/android/gms/internal/ads/zzbnx;)V
+    .locals 1
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    new-instance v0, Lcom/google/android/gms/ads/VideoController;
+
+    invoke-direct {v0}, Lcom/google/android/gms/ads/VideoController;-><init>()V
+
+    iput-object v0, p0, Lcom/google/android/gms/ads/internal/client/zzfb;->zzb:Lcom/google/android/gms/ads/VideoController;
+
+    iput-object p1, p0, Lcom/google/android/gms/ads/internal/client/zzfb;->zza:Lcom/google/android/gms/internal/ads/zzbnd;
+
+    iput-object p2, p0, Lcom/google/android/gms/ads/internal/client/zzfb;->zzc:Lcom/google/android/gms/internal/ads/zzbnx;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final getAspectRatio()F
+    .locals 1
+
+    :try_start_0
+    iget-object p0, p0, Lcom/google/android/gms/ads/internal/client/zzfb;->zza:Lcom/google/android/gms/internal/ads/zzbnd;
+
+    invoke-interface {p0}, Lcom/google/android/gms/internal/ads/zzbnd;->zze()F
+
+    move-result p0
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return p0
+
+    :catch_0
+    move-exception p0
+
+    const-string v0, ""
+
+    invoke-static {v0, p0}, Lcom/google/android/gms/ads/internal/util/client/zzo;->zzg(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
+.method public final getCurrentTime()F
+    .locals 1
+
+    :try_start_0
+    iget-object p0, p0, Lcom/google/android/gms/ads/internal/client/zzfb;->zza:Lcom/google/android/gms/internal/ads/zzbnd;
+
+    invoke-interface {p0}, Lcom/google/android/gms/internal/ads/zzbnd;->zzi()F
+
+    move-result p0
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return p0
+
+    :catch_0
+    move-exception p0
+
+    const-string v0, ""
+
+    invoke-static {v0, p0}, Lcom/google/android/gms/ads/internal/util/client/zzo;->zzg(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
+.method public final getDuration()F
+    .locals 1
+
+    :try_start_0
+    iget-object p0, p0, Lcom/google/android/gms/ads/internal/client/zzfb;->zza:Lcom/google/android/gms/internal/ads/zzbnd;
+
+    invoke-interface {p0}, Lcom/google/android/gms/internal/ads/zzbnd;->zzh()F
+
+    move-result p0
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return p0
+
+    :catch_0
+    move-exception p0
+
+    const-string v0, ""
+
+    invoke-static {v0, p0}, Lcom/google/android/gms/ads/internal/util/client/zzo;->zzg(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
+.method public final getMainImage()Landroid/graphics/drawable/Drawable;
+    .locals 1
+
+    :try_start_0
+    iget-object p0, p0, Lcom/google/android/gms/ads/internal/client/zzfb;->zza:Lcom/google/android/gms/internal/ads/zzbnd;
+
+    invoke-interface {p0}, Lcom/google/android/gms/internal/ads/zzbnd;->zzg()Lcom/google/android/gms/dynamic/IObjectWrapper;
+
+    move-result-object p0
+
+    if-eqz p0, :cond_0
+
+    invoke-static {p0}, Lcom/google/android/gms/dynamic/ObjectWrapper;->unwrap(Lcom/google/android/gms/dynamic/IObjectWrapper;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Landroid/graphics/drawable/Drawable;
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-object p0
+
+    :catch_0
+    move-exception p0
+
+    const-string v0, ""
+
+    invoke-static {v0, p0}, Lcom/google/android/gms/ads/internal/util/client/zzo;->zzg(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_0
+    const/4 p0, 0x0
+
+    return-object p0
+.end method
+
+.method public final getVideoController()Lcom/google/android/gms/ads/VideoController;
+    .locals 2
+
+    :try_start_0
+    iget-object v0, p0, Lcom/google/android/gms/ads/internal/client/zzfb;->zza:Lcom/google/android/gms/internal/ads/zzbnd;
+
+    invoke-interface {v0}, Lcom/google/android/gms/internal/ads/zzbnd;->zzj()Lcom/google/android/gms/ads/internal/client/zzea;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_0
+
+    iget-object v1, p0, Lcom/google/android/gms/ads/internal/client/zzfb;->zzb:Lcom/google/android/gms/ads/VideoController;
+
+    invoke-interface {v0}, Lcom/google/android/gms/internal/ads/zzbnd;->zzj()Lcom/google/android/gms/ads/internal/client/zzea;
+
+    move-result-object v0
+
+    invoke-virtual {v1, v0}, Lcom/google/android/gms/ads/VideoController;->zza(Lcom/google/android/gms/ads/internal/client/zzea;)V
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception v0
+
+    const-string v1, "Exception occurred while getting video controller"
+
+    invoke-static {v1, v0}, Lcom/google/android/gms/ads/internal/util/client/zzo;->zzg(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_0
+    :goto_0
+    iget-object p0, p0, Lcom/google/android/gms/ads/internal/client/zzfb;->zzb:Lcom/google/android/gms/ads/VideoController;
+
+    return-object p0
+.end method
+
+.method public final hasVideoContent()Z
+    .locals 1
+
+    :try_start_0
+    iget-object p0, p0, Lcom/google/android/gms/ads/internal/client/zzfb;->zza:Lcom/google/android/gms/internal/ads/zzbnd;
+
+    invoke-interface {p0}, Lcom/google/android/gms/internal/ads/zzbnd;->zzk()Z
+
+    move-result p0
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return p0
+
+    :catch_0
+    move-exception p0
+
+    const-string v0, ""
+
+    invoke-static {v0, p0}, Lcom/google/android/gms/ads/internal/util/client/zzo;->zzg(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
+.method public final setMainImage(Landroid/graphics/drawable/Drawable;)V
+    .locals 0
+
+    :try_start_0
+    iget-object p0, p0, Lcom/google/android/gms/ads/internal/client/zzfb;->zza:Lcom/google/android/gms/internal/ads/zzbnd;
+
+    invoke-static {p1}, Lcom/google/android/gms/dynamic/ObjectWrapper;->wrap(Ljava/lang/Object;)Lcom/google/android/gms/dynamic/IObjectWrapper;
+
+    move-result-object p1
+
+    invoke-interface {p0, p1}, Lcom/google/android/gms/internal/ads/zzbnd;->zzf(Lcom/google/android/gms/dynamic/IObjectWrapper;)V
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-void
+
+    :catch_0
+    move-exception p0
+
+    const-string p1, ""
+
+    invoke-static {p1, p0}, Lcom/google/android/gms/ads/internal/util/client/zzo;->zzg(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    return-void
+.end method
+
+.method public final zza()Z
+    .locals 1
+
+    :try_start_0
+    iget-object p0, p0, Lcom/google/android/gms/ads/internal/client/zzfb;->zza:Lcom/google/android/gms/internal/ads/zzbnd;
+
+    invoke-interface {p0}, Lcom/google/android/gms/internal/ads/zzbnd;->zzl()Z
+
+    move-result p0
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return p0
+
+    :catch_0
+    move-exception p0
+
+    const-string v0, ""
+
+    invoke-static {v0, p0}, Lcom/google/android/gms/ads/internal/util/client/zzo;->zzg(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
+.method public final zzb()Lcom/google/android/gms/internal/ads/zzbnx;
+    .locals 0
+
+    iget-object p0, p0, Lcom/google/android/gms/ads/internal/client/zzfb;->zzc:Lcom/google/android/gms/internal/ads/zzbnx;
+
+    return-object p0
+.end method
+
+.method public final zzc()Lcom/google/android/gms/internal/ads/zzbnd;
+    .locals 0
+
+    iget-object p0, p0, Lcom/google/android/gms/ads/internal/client/zzfb;->zza:Lcom/google/android/gms/internal/ads/zzbnd;
+
+    return-object p0
+.end method

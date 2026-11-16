@@ -1,0 +1,24 @@
+package com.ironsource.adqualitysdk.sdk.i;
+
+import com.vungle.ads.internal.model.AppNode;
+import java.util.ArrayList;
+
+/* JADX INFO: loaded from: classes5.dex */
+public final class A0 implements InterfaceC0256 {
+
+    /* JADX INFO: renamed from: ﾒ, reason: contains not printable characters */
+    public final /* synthetic */ G0 f64;
+
+    public A0(G0 g0) {
+        this.f64 = g0;
+    }
+
+    @Override // com.ironsource.adqualitysdk.sdk.i.InterfaceC0256
+    /* JADX INFO: renamed from: ﾒ */
+    public final Object mo1349(ArrayList arrayList, C0472 c0472) {
+        G0 g0 = this.f64;
+        AppNode appNode = (AppNode) arrayList.get(0);
+        g0.getClass();
+        return appNode.getAppId();
+    }
+}

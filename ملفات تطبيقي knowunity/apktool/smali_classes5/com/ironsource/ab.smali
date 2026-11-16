@@ -1,0 +1,125 @@
+.class public final Lcom/ironsource/ab;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lcom/ironsource/bb;
+
+
+# instance fields
+.field private final a:Lcom/ironsource/Wa;
+
+.field private final b:Lcom/ironsource/U2;
+
+
+# direct methods
+.method public constructor <init>(Lcom/ironsource/Wa;Lcom/ironsource/U2;)V
+    .locals 0
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lcom/ironsource/ab;->a:Lcom/ironsource/Wa;
+
+    iput-object p2, p0, Lcom/ironsource/ab;->b:Lcom/ironsource/U2;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public a(Lcom/ironsource/u0;)V
+    .locals 2
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget-object v0, p0, Lcom/ironsource/ab;->a:Lcom/ironsource/Wa;
+
+    iget-object v1, p0, Lcom/ironsource/ab;->b:Lcom/ironsource/U2;
+
+    invoke-virtual {v0, p1, v1}, Lcom/ironsource/Wa;->a(Lcom/ironsource/u0;Lcom/ironsource/U2;)V
+
+    iget-object p1, p0, Lcom/ironsource/ab;->a:Lcom/ironsource/Wa;
+
+    new-instance v0, Lcom/ironsource/Za;
+
+    iget-object p0, p0, Lcom/ironsource/ab;->b:Lcom/ironsource/U2;
+
+    invoke-direct {v0, p1, p0}, Lcom/ironsource/Za;-><init>(Lcom/ironsource/Wa;Lcom/ironsource/U2;)V
+
+    invoke-virtual {p1, v0}, Lcom/ironsource/Wa;->a(Lcom/ironsource/bb;)V
+
+    return-void
+.end method
+
+.method public b()V
+    .locals 1
+
+    .line 28
+    iget-object p0, p0, Lcom/ironsource/ab;->a:Lcom/ironsource/Wa;
+
+    const-string v0, "Loading an ad while loading"
+
+    invoke-virtual {p0, v0}, Lcom/ironsource/Wa;->a(Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public b(Lcom/ironsource/mediationsdk/logger/IronSourceError;)V
+    .locals 1
+
+    iget-object v0, p0, Lcom/ironsource/ab;->a:Lcom/ironsource/Wa;
+
+    invoke-virtual {v0, p1}, Lcom/ironsource/Wa;->a(Lcom/ironsource/mediationsdk/logger/IronSourceError;)V
+
+    iget-object p1, p0, Lcom/ironsource/ab;->b:Lcom/ironsource/U2;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0}, Lcom/ironsource/q0;->a(Z)V
+
+    iget-object p1, p0, Lcom/ironsource/ab;->a:Lcom/ironsource/Wa;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0}, Lcom/ironsource/Wa;->a(Lcom/ironsource/U2;)V
+
+    iget-object p0, p0, Lcom/ironsource/ab;->a:Lcom/ironsource/Wa;
+
+    new-instance p1, Lcom/ironsource/Ya;
+
+    invoke-direct {p1, p0}, Lcom/ironsource/Ya;-><init>(Lcom/ironsource/Wa;)V
+
+    invoke-virtual {p0, p1}, Lcom/ironsource/Wa;->a(Lcom/ironsource/bb;)V
+
+    return-void
+.end method
+
+.method public c()V
+    .locals 2
+
+    iget-object v0, p0, Lcom/ironsource/ab;->b:Lcom/ironsource/U2;
+
+    const/4 v1, 0x1
+
+    invoke-virtual {v0, v1}, Lcom/ironsource/q0;->a(Z)V
+
+    iget-object v0, p0, Lcom/ironsource/ab;->a:Lcom/ironsource/Wa;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Lcom/ironsource/Wa;->a(Lcom/ironsource/U2;)V
+
+    iget-object p0, p0, Lcom/ironsource/ab;->a:Lcom/ironsource/Wa;
+
+    new-instance v0, Lcom/ironsource/Ya;
+
+    invoke-direct {v0, p0}, Lcom/ironsource/Ya;-><init>(Lcom/ironsource/Wa;)V
+
+    invoke-virtual {p0, v0}, Lcom/ironsource/Wa;->a(Lcom/ironsource/bb;)V
+
+    return-void
+.end method

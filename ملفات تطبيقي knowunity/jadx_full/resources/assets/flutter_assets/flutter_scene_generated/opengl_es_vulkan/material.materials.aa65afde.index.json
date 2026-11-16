@@ -1,0 +1,21 @@
+{
+  "schema": 2,
+  "package": "app",
+  "bundleName": "materials",
+  "shaderBundleFileName": "material.materials.aa65afde.shaderbundle",
+  "sidecarFileName": "material.materials.aa65afde.fmat.json",
+  "materials": {
+    "KnowieRunOutline": {
+      "entryName": "KnowieRunOutline",
+      "source": "hook/assets/knowie_run/outline.fmat"
+    },
+    "KnowieRunTimerStrip": {
+      "entryName": "KnowieRunTimerStrip",
+      "source": "hook/assets/knowie_run/timer_strip.fmat"
+    },
+    "KnowieRunToon": {
+      "entryName": "KnowieRunToon",
+      "source": "hook/assets/knowie_run/toon.fmat"
+    }
+  }
+}

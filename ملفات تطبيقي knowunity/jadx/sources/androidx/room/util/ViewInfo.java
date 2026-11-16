@@ -1,0 +1,58 @@
+package androidx.room.util;
+
+import android.database.Cursor;
+import androidx.sqlite.db.SupportSQLiteDatabase;
+import defpackage.xy2;
+
+/* JADX INFO: loaded from: classes3.dex */
+public class ViewInfo {
+    public final String name;
+    public final String sql;
+
+    public ViewInfo(String str, String str2) {
+        this.name = str;
+        this.sql = str2;
+    }
+
+    public static ViewInfo read(SupportSQLiteDatabase supportSQLiteDatabase, String str) {
+        Cursor cursorQuery = supportSQLiteDatabase.query("SELECT name, sql FROM sqlite_master WHERE type = 'view' AND name = '" + str + "'");
+        try {
+            return cursorQuery.moveToFirst() ? new ViewInfo(cursorQuery.getString(0), cursorQuery.getString(1)) : new ViewInfo(str, null);
+        } finally {
+            cursorQuery.close();
+        }
+    }
+
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj != null && getClass() == obj.getClass()) {
+            ViewInfo viewInfo = (ViewInfo) obj;
+            String str = this.name;
+            String str2 = viewInfo.name;
+            if (str == null ? str2 == null : str.equals(str2)) {
+                String str3 = this.sql;
+                String str4 = viewInfo.sql;
+                if (str3 == null ? str4 == null : str3.equals(str4)) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
+    public int hashCode() {
+        String str = this.name;
+        int iHashCode = (str != null ? str.hashCode() : 0) * 31;
+        String str2 = this.sql;
+        return iHashCode + (str2 != null ? str2.hashCode() : 0);
+    }
+
+    public String toString() {
+        StringBuilder sb = new StringBuilder("ViewInfo{name='");
+        sb.append(this.name);
+        sb.append("', sql='");
+        return xy2.r(sb, this.sql, "'}");
+    }
+}

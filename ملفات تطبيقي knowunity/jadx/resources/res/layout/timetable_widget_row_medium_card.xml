@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/row_root"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/timetable_widget_medium_card_height">
+    <ImageView
+        android:id="@+id/row_fill"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/timetable_widget_pill_fill"
+        android:scaleType="fitXY"
+        android:contentDescription="@null"/>
+    <LinearLayout
+        android:gravity="start|center_vertical"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp">
+        <include layout="@layout/timetable_widget_row_title"/>
+        <TextView
+            android:ellipsize="end"
+            android:gravity="start|center_vertical"
+            android:id="@+id/row_detail"
+            android:layout_width="match_parent"
+            android:layout_height="16dp"
+            android:maxLines="1"
+            style="@style/TimetableWidgetText.CaptionM"/>
+    </LinearLayout>
+</FrameLayout>

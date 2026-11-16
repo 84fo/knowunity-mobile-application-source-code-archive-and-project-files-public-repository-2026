@@ -1,0 +1,59 @@
+.class final enum Landroidx/test/espresso/core/internal/deps/guava/collect/Maps$EntryFunction$2;
+.super Landroidx/test/espresso/core/internal/deps/guava/collect/Maps$EntryFunction;
+.source "SourceFile"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Landroidx/test/espresso/core/internal/deps/guava/collect/Maps$EntryFunction;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x4011
+    name = null
+.end annotation
+
+
+# direct methods
+.method public constructor <init>(Ljava/lang/String;I)V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    invoke-direct {p0, p1, p2, v0}, Landroidx/test/espresso/core/internal/deps/guava/collect/Maps$EntryFunction;-><init>(Ljava/lang/String;ILandroidx/test/espresso/core/internal/deps/guava/collect/Maps$1;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public bridge synthetic apply(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p1, Ljava/util/Map$Entry;
+
+    invoke-virtual {p0, p1}, Landroidx/test/espresso/core/internal/deps/guava/collect/Maps$EntryFunction$2;->apply(Ljava/util/Map$Entry;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public apply(Ljava/util/Map$Entry;)Ljava/lang/Object;
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/Map$Entry<",
+            "**>;)",
+            "Ljava/lang/Object;"
+        }
+    .end annotation
+
+    .line 7
+    invoke-interface {p1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+
+    move-result-object p0
+
+    return-object p0
+.end method

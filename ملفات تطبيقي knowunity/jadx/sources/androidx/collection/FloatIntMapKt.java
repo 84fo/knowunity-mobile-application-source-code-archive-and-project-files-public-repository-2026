@@ -1,0 +1,114 @@
+package androidx.collection;
+
+import kotlin.jvm.functions.Function1;
+
+/* JADX INFO: loaded from: classes.dex */
+public final class FloatIntMapKt {
+    private static final MutableFloatIntMap EmptyFloatIntMap = new MutableFloatIntMap(0);
+
+    public static final FloatIntMap buildFloatIntMap(Function1 function1) {
+        function1.getClass();
+        MutableFloatIntMap mutableFloatIntMap = new MutableFloatIntMap(0, 1, null);
+        function1.invoke(mutableFloatIntMap);
+        return mutableFloatIntMap;
+    }
+
+    public static final FloatIntMap emptyFloatIntMap() {
+        return EmptyFloatIntMap;
+    }
+
+    public static final FloatIntMap floatIntMapOf(float f, int i, float f2, int i2, float f3, int i3, float f4, int i4, float f5, int i5) {
+        MutableFloatIntMap mutableFloatIntMap = new MutableFloatIntMap(0, 1, null);
+        mutableFloatIntMap.set(f, i);
+        mutableFloatIntMap.set(f2, i2);
+        mutableFloatIntMap.set(f3, i3);
+        mutableFloatIntMap.set(f4, i4);
+        mutableFloatIntMap.set(f5, i5);
+        return mutableFloatIntMap;
+    }
+
+    public static final MutableFloatIntMap mutableFloatIntMapOf(float f, int i, float f2, int i2, float f3, int i3, float f4, int i4, float f5, int i5) {
+        MutableFloatIntMap mutableFloatIntMap = new MutableFloatIntMap(0, 1, null);
+        mutableFloatIntMap.set(f, i);
+        mutableFloatIntMap.set(f2, i2);
+        mutableFloatIntMap.set(f3, i3);
+        mutableFloatIntMap.set(f4, i4);
+        mutableFloatIntMap.set(f5, i5);
+        return mutableFloatIntMap;
+    }
+
+    public static final FloatIntMap buildFloatIntMap(int i, Function1 function1) {
+        function1.getClass();
+        MutableFloatIntMap mutableFloatIntMap = new MutableFloatIntMap(i);
+        function1.invoke(mutableFloatIntMap);
+        return mutableFloatIntMap;
+    }
+
+    public static final FloatIntMap floatIntMapOf(float f, int i) {
+        MutableFloatIntMap mutableFloatIntMap = new MutableFloatIntMap(0, 1, null);
+        mutableFloatIntMap.set(f, i);
+        return mutableFloatIntMap;
+    }
+
+    public static final MutableFloatIntMap mutableFloatIntMapOf(float f, int i) {
+        MutableFloatIntMap mutableFloatIntMap = new MutableFloatIntMap(0, 1, null);
+        mutableFloatIntMap.set(f, i);
+        return mutableFloatIntMap;
+    }
+
+    public static final FloatIntMap floatIntMapOf(float f, int i, float f2, int i2) {
+        MutableFloatIntMap mutableFloatIntMap = new MutableFloatIntMap(0, 1, null);
+        mutableFloatIntMap.set(f, i);
+        mutableFloatIntMap.set(f2, i2);
+        return mutableFloatIntMap;
+    }
+
+    public static final MutableFloatIntMap mutableFloatIntMapOf(float f, int i, float f2, int i2) {
+        MutableFloatIntMap mutableFloatIntMap = new MutableFloatIntMap(0, 1, null);
+        mutableFloatIntMap.set(f, i);
+        mutableFloatIntMap.set(f2, i2);
+        return mutableFloatIntMap;
+    }
+
+    public static final FloatIntMap floatIntMapOf(float f, int i, float f2, int i2, float f3, int i3) {
+        MutableFloatIntMap mutableFloatIntMap = new MutableFloatIntMap(0, 1, null);
+        mutableFloatIntMap.set(f, i);
+        mutableFloatIntMap.set(f2, i2);
+        mutableFloatIntMap.set(f3, i3);
+        return mutableFloatIntMap;
+    }
+
+    public static final MutableFloatIntMap mutableFloatIntMapOf(float f, int i, float f2, int i2, float f3, int i3) {
+        MutableFloatIntMap mutableFloatIntMap = new MutableFloatIntMap(0, 1, null);
+        mutableFloatIntMap.set(f, i);
+        mutableFloatIntMap.set(f2, i2);
+        mutableFloatIntMap.set(f3, i3);
+        return mutableFloatIntMap;
+    }
+
+    public static final FloatIntMap floatIntMapOf(float f, int i, float f2, int i2, float f3, int i3, float f4, int i4) {
+        MutableFloatIntMap mutableFloatIntMap = new MutableFloatIntMap(0, 1, null);
+        mutableFloatIntMap.set(f, i);
+        mutableFloatIntMap.set(f2, i2);
+        mutableFloatIntMap.set(f3, i3);
+        mutableFloatIntMap.set(f4, i4);
+        return mutableFloatIntMap;
+    }
+
+    public static final MutableFloatIntMap mutableFloatIntMapOf(float f, int i, float f2, int i2, float f3, int i3, float f4, int i4) {
+        MutableFloatIntMap mutableFloatIntMap = new MutableFloatIntMap(0, 1, null);
+        mutableFloatIntMap.set(f, i);
+        mutableFloatIntMap.set(f2, i2);
+        mutableFloatIntMap.set(f3, i3);
+        mutableFloatIntMap.set(f4, i4);
+        return mutableFloatIntMap;
+    }
+
+    public static final FloatIntMap floatIntMapOf() {
+        return EmptyFloatIntMap;
+    }
+
+    public static final MutableFloatIntMap mutableFloatIntMapOf() {
+        return new MutableFloatIntMap(0, 1, null);
+    }
+}

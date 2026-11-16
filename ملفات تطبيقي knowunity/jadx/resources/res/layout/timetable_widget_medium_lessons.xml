@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widget_root"
+    android:background="@drawable/timetable_widget_background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToOutline="true">
+    <include layout="@layout/timetable_widget_date_column"/>
+    <ListView
+        android:id="@+id/medium_list"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:scrollbars="none"
+        android:clipToPadding="false"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="4dp"
+        android:layout_marginStart="94dp"
+        android:layout_marginEnd="12dp"/>
+    <ImageView
+        android:layout_gravity="start|bottom"
+        android:id="@+id/medium_knowie"
+        android:layout_width="62.126dp"
+        android:layout_height="62.126dp"
+        android:contentDescription="@null"/>
+    <include layout="@layout/timetable_widget_medium_message"/>
+</FrameLayout>
